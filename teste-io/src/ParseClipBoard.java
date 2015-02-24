@@ -31,6 +31,8 @@ public class ParseClipBoard {
 
 			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 			String vai = "";
+			
+			// CRIA UMA LINHA EM BRANCO ANTES DO CÓDIGO
 			if (a.equals("1")) {
 				vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";}
 
@@ -55,22 +57,18 @@ public class ParseClipBoard {
 				
 				
 				// APLICA TRATAMENTO DIFERENCIADO PARA PARÁGRAFO E CÓDIGO
+				s = s.replace("<", "&lt;");
+				s = s.replace(">", "&gt;");
 				if (a.equals("1")) {
-					s = s.replace(" ", "&nbsp;");
-					s = s.replace("<", "<font color=\"blue\" size=\"3\">&lt;");
-					s = s.replace(">", "&gt;</font>");
-					
-					s = "<p><font size='3' color='red'>" + s + "</font></p>";
+					s = "<p><font size='2' color='purple'><em><strong>" + s + "</strong></em></font></p>";
 				} else if (a.equals("2")) {
-					s = s.replace("<", "<font color=\"blue\" size=\"3\">&lt;");
-					s = s.replace(">", "&gt;</font>");
-					
 					s = "<p><font size='3'>" + s + "</font></p>";
 				}
 				
 				vai = vai + s + "\n";
 			}
 
+			// CRIA UMA LINHA EM BRANCO APÓS O CÓDIGO
 			if (a.equals("1")) {
 				vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";}
 
