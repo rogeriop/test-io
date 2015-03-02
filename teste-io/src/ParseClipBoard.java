@@ -14,12 +14,12 @@ public class ParseClipBoard {
 
 		// PEGA OPÇÕES NA LINHA DE COMANDO
 		do {
-			System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 9-Encerra");
+			System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 3-Lista Numerada / 9-Encerra");
 			a = console.nextLine();
-			if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("9"))) {
+			if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3"))&& !(a.equals("9"))) {
 				System.out.println("Nada Feito");
 			}
-		} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("9")));
+		} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3")) && !(a.equals("9")));
 		
 		// EXECUTA A OPÇÃO DESEJADA E SOLICITA MAIS DEMANDA
 		while (!a.equals("9")) {
@@ -35,6 +35,10 @@ public class ParseClipBoard {
 			// CRIA UMA LINHA EM BRANCO ANTES DO CÓDIGO
 			if (a.equals("1")) {
 				vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";}
+
+			// ADICIONA 1a. TAG DE UMA LISTA NUMERADA
+			if (a.equals("3")) {
+				vai = vai + "<ol>" + "\n";}
 
 			// VARRE AS LINHAS VINDAS DO CLIPBOARD PARA MODIFICAÇÃO
 			for (String s : linhas) {
@@ -56,13 +60,15 @@ public class ParseClipBoard {
 				}
 				
 				
-				// APLICA TRATAMENTO DIFERENCIADO PARA PARÁGRAFO E CÓDIGO
+				// APLICA TRATAMENTO DIFERENCIADO PARA PARÁGRAFO, CÓDIGO OU LISTA
 				s = s.replace("<", "&lt;");
 				s = s.replace(">", "&gt;");
 				if (a.equals("1")) {
 					s = "<p><font size='2' color='purple'><em><strong>" + s + "</strong></em></font></p>";
 				} else if (a.equals("2")) {
 					s = "<p><font size='3'>" + s + "</font></p>";
+				} else if (a.equals("3")) {
+					s = "<li><p><font size='3'>" + s + "</font></p></li>";
 				}
 				
 				vai = vai + s + "\n";
@@ -71,6 +77,10 @@ public class ParseClipBoard {
 			// CRIA UMA LINHA EM BRANCO APÓS O CÓDIGO
 			if (a.equals("1")) {
 				vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";}
+
+			// FECHA TAG DE UMA LISTA NUMERADA
+			if (a.equals("3")) {
+				vai = vai + "</ol>" + "\n";}
 
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
 			clipBoard.copia(vai);
@@ -82,12 +92,12 @@ public class ParseClipBoard {
 
 			// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
 			do {
-				System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 9-Encerra");
+				System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 3-Lista Numerada / 9-Encerra");
 				a = console.nextLine();
-				if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("9"))) {
+				if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3")) && !(a.equals("9"))) {
 					System.out.println("Nada Feito");
 				}
-			} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("9")));
+			} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3")) && !(a.equals("9")));
 			
 		}
 
