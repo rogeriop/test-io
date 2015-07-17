@@ -68,7 +68,7 @@ public class ParseClipBoard {
 				} else if (a.equals("2")) {
 					s = "<p><font size='3'>" + s + "</font></p>";
 				} else if (a.equals("3")) {
-					s = "<li><p><font size='3'>" + s + "</font></p></li>";
+					s = "<li><font size='3'>" + s + "</font></li>";
 				}
 				
 				vai = vai + s + "\n";
