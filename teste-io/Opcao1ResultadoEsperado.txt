@@ -1,0 +1,10 @@
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='2' color='purple'><em><strong>@Test(expected=RuntimeException.class)</strong></em></font></p>
+<p><font size='2' color='purple'><em><strong>public void naoDeveAvaliarLeiloesSemNenhumLanceDado() {</strong></em></font></p>
+<p><font size='2' color='purple'><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;    Leilao leilao = new CriadorDeLeilao()</strong></em></font></p>
+<p><font size='2' color='purple'><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        .para("Playstation 3 Novo")</strong></em></font></p>
+<p><font size='2' color='purple'><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        .constroi();</strong></em></font></p>
+<p><font size='2' color='purple'><em><strong></strong></em></font></p>
+<p><font size='2' color='purple'><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;    leiloeiro.avalia(leilao);</strong></em></font></p>
+<p><font size='2' color='purple'><em><strong>}</strong></em></font></p>
+<p><font size='3'>&nbsp;</font></p>

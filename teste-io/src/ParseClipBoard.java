@@ -90,6 +90,7 @@ public class ParseClipBoard {
 			System.out.print("Feito as " );
 			System.out.printf("%1$tH:%1$tM:%1$tS\n", dateTime);
 
+			
 			// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
 			do {
 				System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 3-Lista Numerada / 9-Encerra");

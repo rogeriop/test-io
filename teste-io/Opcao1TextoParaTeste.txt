@@ -1,0 +1,8 @@
+@Test(expected=RuntimeException.class)
+public void naoDeveAvaliarLeiloesSemNenhumLanceDado() {
+    Leilao leilao = new CriadorDeLeilao()
+        .para("Playstation 3 Novo")
+        .constroi();
+
+    leiloeiro.avalia(leilao);
+}
