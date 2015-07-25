@@ -1,0 +1,7 @@
+
+    Usando o @Before no AvaliadorTest
+    Entendendo o @Before
+    Conhecendo o @After
+    Test Data Builder
+    @BeforeClass e @AfterClass
+    Vantagens de testes de qualidade

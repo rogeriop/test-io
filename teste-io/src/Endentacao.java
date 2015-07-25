@@ -7,7 +7,7 @@ public class Endentacao {
 		this.linha = linha;
 	}
 	
-	public String adiciona() {
+	public Endentacao adiciona() {
 
 			// ADICIONA NA VARIÁVEL DE SAÍDA ENDENTAÇÃO DO PARÁGRAFO
 			char charArray[] = linha.toCharArray();
@@ -25,9 +25,12 @@ public class Endentacao {
 				}
 			}
 			
-			return linha;
+			return this;
 
-	
 	}
+	public String getLinha() {
+		return this.linha;
+	}
+	
 	
 }

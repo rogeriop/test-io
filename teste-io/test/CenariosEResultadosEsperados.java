@@ -5,32 +5,38 @@ import java.util.Scanner;
 
 public class CenariosEResultadosEsperados  {
 
+	private String nomeArquivoTextoParaOTeste;
+	private String nomeArquivoComResultadoEsperado;
+	
+	private String cenario = "";
+	private String resultado = "";
+	
+	public CenariosEResultadosEsperados(String nomeArquivoTextoParaOTeste,	
+			String nomeArquivoComResultadoEsperado) throws IOException {
 
-	public String trasCenarioOpcao1() throws IOException {
-
-		String vem = "";
-
-
-		// monta o cenário
-		Scanner sce = new Scanner(new FileInputStream("Opcao1TextoParaTeste.txt"));
-		while(sce.hasNextLine()) {
-			vem = vem + sce.nextLine() + "\n";
-		}
-		return vem;
+		this.nomeArquivoTextoParaOTeste = nomeArquivoTextoParaOTeste;
+		this.nomeArquivoComResultadoEsperado = nomeArquivoComResultadoEsperado;
 		
+		// Monta o texto para o teste
+		Scanner sce = new Scanner(new FileInputStream(this.nomeArquivoTextoParaOTeste));
+		while(sce.hasNextLine()) {
+			this.cenario = this.cenario + sce.nextLine() + "\n";
+		}
+
+		// Monta Resultado Esperado
+		Scanner scs = new Scanner(new FileInputStream(this.nomeArquivoComResultadoEsperado));
+		while(scs.hasNextLine()) {
+			this.resultado = this.resultado + scs.nextLine() + "\n";
+		}
+
+	}
+
+	public String getCenario() {
+		return this.cenario;
 	}
 	
-	public String trasResultadoOpcao1() throws IOException {
-		String MeuResultado = "";
-		
-		Scanner scs = new Scanner(new FileInputStream("Opcao1ResultadoEsperado.txt"));
-		while(scs.hasNextLine()) {
-			MeuResultado = MeuResultado + scs.nextLine() + "\n";
-		}
-		
-		return MeuResultado;
-		
+	public String getResultado() {
+		return this.resultado;
 	}
-
 
 }

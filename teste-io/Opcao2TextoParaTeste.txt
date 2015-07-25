@@ -1,0 +1,5 @@
+Podemos melhorar ainda mais nosso código de teste. Veja que criar um Leilao não é uma tarefa fácil nem simples de ler. E veja em quantos lugares diferentes fazemos uso da classe Leilão: AvaliadorTest, LeilaoTest.
+
+ 
+
+Podemos isolar o código de criação de leilão em uma classe específica, mais legível e clara. Podemos, por exemplo, fazer com que nosso método fique algo como:
