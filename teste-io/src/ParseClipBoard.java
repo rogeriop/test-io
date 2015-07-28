@@ -37,6 +37,9 @@ public class ParseClipBoard {
 			case "4":
 				vai = new SubTitulo().transforma(vemEmLinhas);
 				break;
+			case "5":
+				vai = new Link().transforma(vemEmLinhas);
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
