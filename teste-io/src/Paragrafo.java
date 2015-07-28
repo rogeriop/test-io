@@ -1,10 +1,7 @@
 
 public class Paragrafo {
 
-	public String transforma(String vem) {
-
-		// CRIA ARRAY DE LINHAS
-		String[] linhas = vem.split("\n");
+	public String transforma(String[] linhas) {
 
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 		String vai = "";

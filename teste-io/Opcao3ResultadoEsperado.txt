@@ -1,9 +1,8 @@
 <ol>
-<li><font size='3'></font></li>
-<li><font size='3'>&nbsp;&nbsp;&nbsp;&nbsp;    Usando o @Before no AvaliadorTest</font></li>
-<li><font size='3'>&nbsp;&nbsp;&nbsp;&nbsp;    Entendendo o @Before</font></li>
-<li><font size='3'>&nbsp;&nbsp;&nbsp;&nbsp;    Conhecendo o @After</font></li>
-<li><font size='3'>&nbsp;&nbsp;&nbsp;&nbsp;    Test Data Builder</font></li>
-<li><font size='3'>&nbsp;&nbsp;&nbsp;&nbsp;    @BeforeClass e @AfterClass</font></li>
-<li><font size='3'>&nbsp;&nbsp;&nbsp;&nbsp;    Vantagens de testes de qualidade</font></li>
+<li><font size='3'>    Usando o @Before no AvaliadorTest</font></li>
+<li><font size='3'>    Entendendo o @Before</font></li>
+<li><font size='3'>    Conhecendo o @After</font></li>
+<li><font size='3'>    Test Data Builder</font></li>
+<li><font size='3'>    @BeforeClass e @AfterClass</font></li>
+<li><font size='3'>    Vantagens de testes de qualidade</font></li>
 </ol>

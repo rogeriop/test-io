@@ -1,10 +1,7 @@
 
 public class ListaNumerada {
 
-	public String transforma(String vem){
-
-		// RECEBE CONTEÚDO DO CLIPBOARD
-		String[] linhas = vem.split("\n");
+	public String transforma(String[] linhas){
 
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 		String vai = "";
@@ -15,9 +12,6 @@ public class ListaNumerada {
 		// VARRE AS LINHAS VINDAS DO CLIPBOARD PARA MODIFICAÇÃO
 		for (String s : linhas) {
 
-			// ENDENTAÇÃO DA LINHA
-//			s = new Endentacao(s).adiciona().getLinha();			
-			
 			// APLICA TRATAMENTO DIFERENCIADO PARA PARÁGRAFO, CÓDIGO OU LISTA
 			s = s.replace("<", "&lt;");
 			s = s.replace(">", "&gt;");
@@ -32,4 +26,5 @@ public class ListaNumerada {
 		
 		return vai;
 	}
+
 }

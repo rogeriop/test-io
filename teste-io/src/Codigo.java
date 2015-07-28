@@ -1,11 +1,8 @@
 
 public class Codigo {
 
-	public String transforma(String vem) {
+	public String transforma(String[] linhas) {
 		
-		// CRIA ARRAY DE LINHAS
-		String[] linhas = vem.split("\n");
-
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 		String vai = "";
 		

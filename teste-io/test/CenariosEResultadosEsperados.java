@@ -8,6 +8,7 @@ public class CenariosEResultadosEsperados  {
 	private String nomeArquivoTextoParaOTeste;
 	private String nomeArquivoComResultadoEsperado;
 	
+	private String[] cenarioEmLinhas;
 	private String cenario = "";
 	private String resultado = "";
 	
@@ -22,6 +23,9 @@ public class CenariosEResultadosEsperados  {
 		while(sce.hasNextLine()) {
 			this.cenario = this.cenario + sce.nextLine() + "\n";
 		}
+		
+		// Quebra o cenario em linhas
+		cenarioEmLinhas = cenario.split("\n");
 
 		// Monta Resultado Esperado
 		Scanner scs = new Scanner(new FileInputStream(this.nomeArquivoComResultadoEsperado));
@@ -31,8 +35,8 @@ public class CenariosEResultadosEsperados  {
 
 	}
 
-	public String getCenario() {
-		return this.cenario;
+	public String[] getCenarioEmLinhas() {
+		return this.cenarioEmLinhas;
 	}
 	
 	public String getResultado() {

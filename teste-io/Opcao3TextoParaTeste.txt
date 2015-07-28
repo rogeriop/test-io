@@ -1,4 +1,3 @@
-
     Usando o @Before no AvaliadorTest
     Entendendo o @Before
     Conhecendo o @After

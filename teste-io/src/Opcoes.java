@@ -9,12 +9,12 @@ public class Opcoes {
 		
 		// PEGA OPÇÕES NA LINHA DE COMANDO
 		do {
-			System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 3-Lista Numerada / 9-Encerra");
+			System.out.println("Informe tipo: 1-Codigo / 2-Paragrafo / 3-Lista Numerada / 4-SubTitulo / 9-Encerra");
 			a = console.nextLine();
-			if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3"))&& !(a.equals("9"))) {
+			if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3"))&& !(a.equals("4"))&& !(a.equals("9"))) {
 				System.out.println("Nada Feito");
 			}
-		} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3")) && !(a.equals("9")));
+		} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3")) && !(a.equals("4"))&& !(a.equals("9")));
 		return a;
 	}
 }

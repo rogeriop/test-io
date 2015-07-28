@@ -18,18 +18,24 @@ public class ParseClipBoard {
 			// RECEBE CONTEÚDO DO CLIPBOARD
 			String vem = clipBoard.obtem();
 			
+			// CRIA ARRAY DE LINHAS
+			String[] vemEmLinhas = vem.split("\n");
+
 			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 			String vai = "";
 
 			switch (a) {
 			case "1":
-				vai = new Codigo().transforma(vem);
+				vai = new Codigo().transforma(vemEmLinhas);
 				break;
 			case "2":
-				vai = new Paragrafo().transforma(vem);
+				vai = new Paragrafo().transforma(vemEmLinhas);
 				break;
 			case "3":
-				vai = new ListaNumerada().transforma(vem);
+				vai = new ListaNumerada().transforma(vemEmLinhas);
+				break;
+			case "4":
+				vai = new SubTitulo().transforma(vemEmLinhas);
 				break;
 			}
 			
@@ -40,6 +46,11 @@ public class ParseClipBoard {
 			dateTime = Calendar.getInstance();
 			System.out.print("Feito as " );
 			System.out.printf("%1$tH:%1$tM:%1$tS\n", dateTime);
+			System.out.println("------------------");
+			for(int x = 0; (x <= vemEmLinhas.length - 1) && (x < 3); x++) {
+				System.out.println(vemEmLinhas[x]);
+			}
+			System.out.println("------------------");
 			
 			// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
 			a = new Opcoes().pegaOpcao();
