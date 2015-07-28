@@ -40,6 +40,9 @@ public class ParseClipBoard {
 			case "5":
 				vai = new Link().transforma(vemEmLinhas);
 				break;
+			case "6":
+				vai = new Negrito().transforma(vemEmLinhas);
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
