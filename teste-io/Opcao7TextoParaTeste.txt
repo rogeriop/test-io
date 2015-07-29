@@ -1,0 +1,1 @@
+http://10.0.0.115:8080/share/proxy/alfresco/api/node/content/workspace/SpacesStore/14b9d428-5210-44b3-a835-aff37038c14c/cap2-img1-diagram.png

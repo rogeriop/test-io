@@ -10,10 +10,10 @@ public class ParseClipBoard {
 		ClipBoard clipBoard = new ClipBoard();
 
 		// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
-		String a = new Opcoes().pegaOpcao();
+		Opcoes opcoes = new Opcoes();
 		
 		// EXECUTA A OPÇÃO DESEJADA E SOLICITA MAIS DEMANDA
-		while (!a.equals("9")) {
+		while (!opcoes.getA().equals("9")) {
 
 			// RECEBE CONTEÚDO DO CLIPBOARD
 			String vem = clipBoard.obtem();
@@ -24,7 +24,7 @@ public class ParseClipBoard {
 			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 			String vai = "";
 
-			switch (a) {
+			switch (opcoes.getA()) {
 			case "1":
 				vai = new Codigo().transforma(vemEmLinhas);
 				break;
@@ -43,6 +43,9 @@ public class ParseClipBoard {
 			case "6":
 				vai = new Negrito().transforma(vemEmLinhas);
 				break;
+			case "7":
+				vai = new Imagem().transforma(vemEmLinhas, opcoes.getWidth(), opcoes.getHeight());
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
@@ -59,7 +62,7 @@ public class ParseClipBoard {
 			System.out.println("------------------");
 			
 			// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
-			a = new Opcoes().pegaOpcao();
+			opcoes.pegaOpcao();
 			
 		}
 
