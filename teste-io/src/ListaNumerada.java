@@ -23,6 +23,9 @@ public class ListaNumerada {
 
 		// FECHA TAG DE UMA LISTA NUMERADA
 		vai = vai + "</ol>" + "\n";
+
+		// CRIA UMA LINHA EM BRANCO APÓS O CÓDIGO
+		vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";
 		
 		return vai;
 	}

@@ -6,9 +6,6 @@ public class Codigo {
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 		String vai = "";
 		
-		// CRIA UMA LINHA EM BRANCO ANTES DO CÓDIGO
-		vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";
-
 		// VARRE AS LINHAS VINDAS DO CLIPBOARD PARA MODIFICAÇÃO
 		for (String s : linhas) {
 

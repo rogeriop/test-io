@@ -20,6 +20,9 @@ public class Paragrafo {
 			
 			vai = vai + s + "\n";
 		}
+
+		// CRIA UMA LINHA EM BRANCO APÓS O CÓDIGO
+		vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";
 		
 		return vai;
 

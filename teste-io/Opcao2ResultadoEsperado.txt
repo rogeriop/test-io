@@ -3,3 +3,4 @@
 <p><font size='3'>&nbsp; </font></p>
 <p><font size='3'></font></p>
 <p><font size='3'>Podemos isolar o código de criação de leilão em uma classe específica, mais legível e clara. Podemos, por exemplo, fazer com que nosso método fique algo como:</font></p>
+<p><font size='3'>&nbsp;</font></p>

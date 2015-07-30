@@ -1,4 +1,3 @@
-<p><font size='3'>&nbsp;</font></p>
 <p><font size='2' color='purple'><em><strong>@Test(expected=RuntimeException.class)</strong></em></font></p>
 <p><font size='2' color='purple'><em><strong>public void naoDeveAvaliarLeiloesSemNenhumLanceDado() {</strong></em></font></p>
 <p><font size='2' color='purple'><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;    Leilao leilao = new CriadorDeLeilao()</strong></em></font></p>
