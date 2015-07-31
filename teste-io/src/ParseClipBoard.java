@@ -46,6 +46,9 @@ public class ParseClipBoard {
 			case "7":
 				vai = new Imagem().transforma(vemEmLinhas, opcoes.getWidth(), opcoes.getHeight());
 				break;
+			case "8":
+				vai = new  SubTituloDeExercicioOuResposta().transforma(vemEmLinhas);
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD

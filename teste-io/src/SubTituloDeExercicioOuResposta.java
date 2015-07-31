@@ -1,4 +1,4 @@
-public class SubTitulo {
+public class SubTituloDeExercicioOuResposta {
 
 	public String transforma(String[] linhas) {
 
@@ -13,14 +13,13 @@ public class SubTitulo {
 		vai = vai + "<a name='" + new Sumario(s).getAncora() + "'></a>" + "\n";
 		vai = vai + "<p><font size='3'>&nbsp;</font></p>" + "\n";
 
-		s = "<p><font size='3'><strong>" + new Sumario(s).getSubTitulo() + "</strong></font></p>";
+		s = "<p><font size='3'><strong>EX" + new Sumario(s).getNroAncora() + " - " + new Sumario(s).getSubTitulo() + "</strong></font></p>";
 
 		vai = vai + s + "\n";
 
 		vai = vai + "<p><font size='3'>&nbsp;</font></p>" + "\n";
 
 		return vai;
+
 	}
-
-
 }
