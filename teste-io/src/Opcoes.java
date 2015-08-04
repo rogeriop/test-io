@@ -17,13 +17,13 @@ public class Opcoes {
 		// PEGA OPÇÕES NA LINHA DE COMANDO
 		do {
 			System.out.println("Informe tipo: ");
-			System.out.println("              1-Codigo  | 2-Paragrafo | 3-Lista Numerada  | 4-SubTitulo Explicacao |");
-			System.out.println("              5-Link    | 6-Negrito   | 7-Imagem          | 8-subTitulo Exercicios |");
-			System.out.println("              9-Encerra ");
+			System.out.println("              1-Codigo      | 2-Paragrafo | 3-Lista Numerada  | 4-SubTitulo Explicacao |");
+			System.out.println("              5-Link        | 6-Negrito   | 7-Imagem          | 8-subTitulo Exercicios |");
+			System.out.println("              9-Fundo Cinza   99-Encerra ");
 			a = console.nextLine();
 			if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3"))
 					&& !(a.equals("4")) && !(a.equals("5")) && !(a.equals("6"))
-					&& !(a.equals("7")) && !(a.equals("8")) && !(a.equals("9"))) {
+					&& !(a.equals("7")) && !(a.equals("8")) && !(a.equals("9")) && !(a.equals("99"))) {
 				System.out.println("Nada Feito");
 			}
 			if (a.equals("7")) {
@@ -31,7 +31,7 @@ public class Opcoes {
 			}
 		} while (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3"))
 				&& !(a.equals("4")) && !(a.equals("5")) && !(a.equals("6"))
-				&& !(a.equals("7")) && !(a.equals("8")) && !(a.equals("9")));
+				&& !(a.equals("7")) && !(a.equals("8")) && !(a.equals("9")) && !(a.equals("99")));
 
 	}
 

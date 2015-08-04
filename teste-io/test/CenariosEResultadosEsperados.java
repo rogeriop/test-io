@@ -35,6 +35,10 @@ public class CenariosEResultadosEsperados  {
 
 	}
 
+	public String getCenario() {
+		return this.cenario;
+	}
+	
 	public String[] getCenarioEmLinhas() {
 		return this.cenarioEmLinhas;
 	}

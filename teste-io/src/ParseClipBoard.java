@@ -13,7 +13,7 @@ public class ParseClipBoard {
 		Opcoes opcoes = new Opcoes();
 		
 		// EXECUTA A OPÇÃO DESEJADA E SOLICITA MAIS DEMANDA
-		while (!opcoes.getA().equals("9")) {
+		while (!opcoes.getA().equals("99")) {
 
 			// RECEBE CONTEÚDO DO CLIPBOARD
 			String vem = clipBoard.obtem();
@@ -48,6 +48,9 @@ public class ParseClipBoard {
 				break;
 			case "8":
 				vai = new  SubTituloDeExercicioOuResposta().transforma(vemEmLinhas);
+				break;
+			case "9":
+				vai = new  FundoCinza().tranforma(vem); 
 				break;
 			}
 			

@@ -1,0 +1,12 @@
+<p><font size="3">Um projeto de nome <font size="3"><strong>agenda</strong></font> possui este build.xml:</font></p>
+<p><font size="3">&nbsp;</font></p>
+<p><font size="2" color="purple"><em><strong>&lt;project name="agenda" default="compilar"&gt; </strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp; &lt;target name="compilar"&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;delete dir="bin" /&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;mkdir dir="bin" /&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;javac srcdir="src" destdir="bin" &gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/javac&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp; &lt;/target&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&lt;/project&gt;</strong></em></font></p>
+<p><font size="3">&nbsp;</font></p>
+<p><font size="3">Qual seria a sua sugest&atilde;o para diminuir a responsabilidade da <font size="3"><strong>target</strong></font> compilar, j&aacute; que hoje ela al&eacute;m de compilar executa tarefas auxiliares? Explique suas mudan&ccedil;as e cole o novo build.xml.</font></p>

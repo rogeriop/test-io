@@ -1,4 +1,3 @@
-
 public class Negrito {
 
 	public String transforma(String[] linhas) {
@@ -6,18 +5,10 @@ public class Negrito {
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD
 		String vai = "";
 
-		// VARRE AS LINHAS VINDAS DO CLIPBOARD PARA MODIFICAÇÃO
-		for (String s : linhas) {
+		linhas[0] = "<font size='3'><strong>" + linhas[0] + "</strong></font>";
 
-			// RETIRA OS SINAIS DE MAIOR E MENOR PARA NÃO CONFUNDIR O HTML
-			s = s.replace("<", "&lt;");
-			s = s.replace(">", "&gt;");
+		vai = vai + linhas[0] + "\n";
 
-			s = "<font size='3'><strong>" + s + "</strong></font>";
-
-			vai = vai + s + "\n";
-		}
-		
 		return vai;
 	}
 }
