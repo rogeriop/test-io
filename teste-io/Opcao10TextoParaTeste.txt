@@ -1,0 +1,9 @@
+<p><font size="3">&nbsp;</font></p>
+<p><font size="2" color="purple"><em><strong>&lt;target name="compilar-teste" depends="compilar"&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;javac destdir="build/classes-teste" srcdir="src-teste" &gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;classpath&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;!-- defini&ccedil;&atilde;o do classpath--&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/classpath&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/javac&gt;</strong></em></font></p>
+<p><font size="2" color="purple"><em><strong>&lt;/target&gt;</strong></em></font></p>
+<p><font size="3">&nbsp;</font></p>

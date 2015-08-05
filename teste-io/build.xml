@@ -1,23 +1,28 @@
-<project name="teste-io">
+<project name="teste-io" default="empacotar">
 
-	<javac srcdir="src" destdir="bin">
+	<target name="compilar">
 
-		<classpath>
+		<javac srcdir="src" destdir="bin">
 
-			<fileset dir="lib">
+			<classpath>
 
-				<include name="*.jar" />
+				<fileset dir="lib">
 
-			</fileset>
+					<include name="*.jar" />
 
-		</classpath>
+				</fileset>
 
-	</javac>
-	
-	<target name="empacotar">
+			</classpath>
 
-	         <jar destfile="C:/Transfere-LUANA/ParseClipBoard.jar" basedir="bin" />
+		</javac>
 
 	</target>
-	
+
+
+	<target name="empacotar" depends="compilar">
+
+		<jar destfile="C:/Transfere-LUANA/ParseClipBoard.jar" basedir="bin" />
+
+	</target>
+
 </project>
