@@ -44,7 +44,7 @@ public class ParseClipBoardTest {
 	private static String TextoParaOTesteDaOpcao9;
 	private static String ResultadoEsperadoDaOpcao9;
 
-	// Opção 10-Fundo Cinza
+	// Opção 10-Lista Numerada
 	private static String[] TextoParaOTesteDaOpcao10;
 	private static String ResultadoEsperadoDaOpcao10;
 

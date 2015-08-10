@@ -18,7 +18,7 @@ public class ParaListaNumerada {
 		}
 
 		// FECHA TAG DE UMA LISTA NUMERADA
-		vai = vai + "</ol>" + "\n";
+		vai = vai + "</ol>";
 
 		return vai;
 	}

@@ -17,7 +17,7 @@ public class SubTitulo {
 
 		vai = vai + s + "\n";
 
-		vai = vai + "<p><font size='3'>&nbsp;</font></p>" + "\n";
+		vai = vai + "<p><font size='3'>&nbsp;</font></p>";
 
 		return vai;
 	}

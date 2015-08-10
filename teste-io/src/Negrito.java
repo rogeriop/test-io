@@ -5,9 +5,9 @@ public class Negrito {
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD
 		String vai = "";
 
-		linhas[0] = "<font size='3'><strong>" + linhas[0] + "</strong></font>";
+		linhas[0] = "<strong>" + linhas[0] + "</strong>";
 
-		vai = vai + linhas[0] + "\n";
+		vai = vai + linhas[0];
 
 		return vai;
 	}

@@ -15,13 +15,20 @@ public class CenariosEResultadosEsperados  {
 	public CenariosEResultadosEsperados(String nomeArquivoTextoParaOTeste,	
 			String nomeArquivoComResultadoEsperado) throws IOException {
 
+		boolean primeiro = true;
+
 		this.nomeArquivoTextoParaOTeste = nomeArquivoTextoParaOTeste;
 		this.nomeArquivoComResultadoEsperado = nomeArquivoComResultadoEsperado;
 		
 		// Monta o texto para o teste
 		Scanner sce = new Scanner(new FileInputStream(this.nomeArquivoTextoParaOTeste));
 		while(sce.hasNextLine()) {
-			this.cenario = this.cenario + sce.nextLine() + "\n";
+			if(!primeiro) {
+				this.cenario = this.cenario + "\n";
+			}
+			primeiro = false;
+
+			this.cenario = this.cenario + sce.nextLine();
 		}
 		
 		// Quebra o cenario em linhas
@@ -29,8 +36,13 @@ public class CenariosEResultadosEsperados  {
 
 		// Monta Resultado Esperado
 		Scanner scs = new Scanner(new FileInputStream(this.nomeArquivoComResultadoEsperado));
+		primeiro = true;
 		while(scs.hasNextLine()) {
-			this.resultado = this.resultado + scs.nextLine() + "\n";
+			if(!primeiro) {
+				this.resultado = this.resultado + "\n";
+			}
+			primeiro = false;
+			this.resultado = this.resultado + scs.nextLine();
 		}
 
 	}

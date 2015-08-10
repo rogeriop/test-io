@@ -14,7 +14,7 @@ public class FundoCinza {
 		vai = vai + "<td align='right'>&nbsp;</td>" + "\n";
 		vai = vai + "<td bgcolor='#F4F4F4'>" + "\n";
 
-		vai = vai + cenario;
+		vai = vai + cenario + "\n";
 		
 		
 		vai = vai + "</td>" + "\n";
@@ -24,8 +24,7 @@ public class FundoCinza {
 		vai = vai + "<td align='right'>&nbsp;</td>" + "\n";
 		vai = vai + "<td>" + "\n";
 		vai = vai
-				+ "<p><font size='3' color='#FFFFFF'> ***************** FIM DE INSERCAO DE OBJETO COM BGCOLOR ***************************** </font></p>"
-				+ "\n";
+				+ "<p><font size='3' color='#FFFFFF'> ***************** FIM DE INSERCAO DE OBJETO COM BGCOLOR ***************************** </font></p>";
 
 		return vai;
 	}

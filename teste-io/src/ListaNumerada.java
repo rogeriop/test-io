@@ -26,7 +26,7 @@ public class ListaNumerada {
 		vai = vai + "</ol>" + "\n";
 
 		// CRIA UMA LINHA EM BRANCO APÓS O CÓDIGO
-		vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>" + "\n";
+		vai = vai + "<p><font size='3'>" + "&nbsp;" + "</font></p>";
 
 		return vai;
 	}
