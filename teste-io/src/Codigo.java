@@ -10,7 +10,7 @@ public class Codigo {
 		for (String s : linhas) {
 
 			// ENDENTAÇÃO DA LINHA
-			s = new Endentacao(s).adiciona().getLinha();
+			s = new Endentacao(s).adiciona( ).getLinha();
 			
 			// RETIRA OS SINAIS DE MAIOR E MENOR PARA NÃO CONFUNDIR O HTML
 			s = s.replace("<", "&lt;");

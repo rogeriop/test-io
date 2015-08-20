@@ -1,28 +1,63 @@
 <project name="teste-io" default="empacotar">
 
-	<target name="compilar">
+	<property name="src.dir" value="src" />
+	<property name="src-test.dir" value="src-test" />
+	<property name="build.dir" value="build" />
+	<property name="build-classes.dir" value="build/classes" />
+	<property name="build-classes-test.dir" value="build/classes-teste" />
+	<property name="destino-jar.dir" value="build/ParseClipBoard.jar" />
+	<property name="envia-jar.dir" value="C:/Transfere-LUANA/ParseClipBoard.jar" />
+	<property name="relatorio-teste.dir" value="relatorio-teste" />
 
-		<javac srcdir="src" destdir="bin">
+	<path id="path-compilar-teste">
+		<pathelement path="${build-classes.dir}" />
+		<fileset dir="C:\eclipse-jee-indigo-SR2-win32\eclipse\plugins\org.junit_4.8.2.v4_8_2_v20110321-1705">
+			<include name="*.jar" />
+		</fileset>
+	</path>
 
-			<classpath>
+	<path id="path-executar-teste">
+		<path refid="path-compilar-teste" />
+		<pathelement location="build/classes" />
+		<pathelement location="build/classes-teste" />
+	</path>
 
-				<fileset dir="lib">
+	<target name="limpar">
+		<delete dir="${build.dir}" />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build-classes.dir}" />
+		<mkdir dir="${build-classes-test.dir}" />
+		<delete dir="${relatorio-teste.dir}" />
+		<mkdir dir="${relatorio-teste.dir}" />
+	</target>
 
-					<include name="*.jar" />
-
-				</fileset>
-
-			</classpath>
-
+	<target name="compilar" depends="limpar">
+		<javac srcdir="${src.dir}" destdir="${build-classes.dir}">
 		</javac>
+	</target>
 
+	<target name="compilar-testes" depends="compilar">
+		<javac srcdir="${src-test.dir}" destdir="${build-classes-test.dir}">
+			<classpath refid="path-compilar-teste" />
+		</javac>
 	</target>
 
 
-	<target name="empacotar" depends="compilar">
+	<target name="executar-testes" depends="compilar-testes">
+		<junit haltonfailure="yes" showoutput="true" printsummary="on">
+			<batchtest todir="${relatorio-teste.dir}">
+				<formatter type="plain" />
+				<fileset dir="${build-classes-test.dir}">
+					<include name="**/*Test.java" />
+				</fileset>
+			</batchtest>
+			<classpath refid="path-executar-teste" />
+		</junit>
+	</target>
 
-		<jar destfile="C:/Transfere-LUANA/ParseClipBoard.jar" basedir="bin" />
-
+	<target name="empacotar" depends="executar-testes">
+		<jar destfile="${destino-jar.dir}" basedir="${build-classes.dir}" />
+		<copy file="${destino-jar.dir}" tofile="${envia-jar.dir}" />  
 	</target>
 
 </project>
