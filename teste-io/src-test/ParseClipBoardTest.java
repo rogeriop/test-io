@@ -48,6 +48,10 @@ public class ParseClipBoardTest {
 	private static String[] TextoParaOTesteDaOpcao10;
 	private static String ResultadoEsperadoDaOpcao10;
 
+	// Opção 11-Itálico Vermelho *6-Negrito
+	private static String[] TextoParaOTesteDaOpcao11;
+	private static String ResultadoEsperadoDaOpcao11;
+
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
 		
@@ -100,7 +104,12 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao10 = new CenariosEResultadosEsperados("Opcao10TextoParaTeste.txt", "Opcao10ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao10 = opcao10.getCenarioEmLinhas();
 		ResultadoEsperadoDaOpcao10 = opcao10.getResultado();
-		
+
+		// Cenário e Resultado Esperado da Opção 11
+		CenariosEResultadosEsperados opcao11 = new CenariosEResultadosEsperados("Opcao11TextoParaTeste.txt", "Opcao11ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao11 = opcao11.getCenarioEmLinhas();
+		ResultadoEsperadoDaOpcao11 = opcao11.getResultado();
+
 	}
 	
 	@Test
@@ -190,6 +199,15 @@ public class ParseClipBoardTest {
 		String ResultadoGerado = new ParaListaNumerada().transforma(TextoParaOTesteDaOpcao10);
 		
 		assertEquals(ResultadoEsperadoDaOpcao10, ResultadoGerado);
+		
+	}
+
+	@Test
+	public void deveFormatarComoUmItalicoVermelho() {
+		
+		String ResultadoGerado = new ItalicoVermelho().transforma(TextoParaOTesteDaOpcao11);
+		
+		assertEquals(ResultadoEsperadoDaOpcao11, ResultadoGerado);
 		
 	}
 

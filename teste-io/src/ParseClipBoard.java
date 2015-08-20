@@ -55,6 +55,9 @@ public class ParseClipBoard {
 			case "10":
 				vai = new  ParaListaNumerada().transforma(vemEmLinhas); 
 				break;
+			case "11":
+				vai = new  ItalicoVermelho().transforma(vemEmLinhas); 
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
