@@ -52,6 +52,10 @@ public class ParseClipBoardTest {
 	private static String[] TextoParaOTesteDaOpcao11;
 	private static String ResultadoEsperadoDaOpcao11;
 
+	// Opção 12-Fonte Maior
+	private static String[] TextoParaOTesteDaOpcao12;
+	private static String ResultadoEsperadoDaOpcao12;
+
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
 		
@@ -109,6 +113,11 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao11 = new CenariosEResultadosEsperados("Opcao11TextoParaTeste.txt", "Opcao11ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao11 = opcao11.getCenarioEmLinhas();
 		ResultadoEsperadoDaOpcao11 = opcao11.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 12
+		CenariosEResultadosEsperados opcao12 = new CenariosEResultadosEsperados("Opcao12TextoParaTeste.txt", "Opcao12ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao12 = opcao12.getCenarioEmLinhas();
+		ResultadoEsperadoDaOpcao12 = opcao12.getResultado();
 
 	}
 	
@@ -208,6 +217,15 @@ public class ParseClipBoardTest {
 		String ResultadoGerado = new ItalicoVermelho().transforma(TextoParaOTesteDaOpcao11);
 		
 		assertEquals(ResultadoEsperadoDaOpcao11, ResultadoGerado);
+		
+	}
+
+	@Test
+	public void deveFormatarComUmaFonteMaior() {
+		
+		String ResultadoGerado = new FonteMaior().transforma(TextoParaOTesteDaOpcao12);
+		
+		assertEquals(ResultadoEsperadoDaOpcao12, ResultadoGerado);
 		
 	}
 

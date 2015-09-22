@@ -13,7 +13,7 @@ public class SubTitulo {
 		vai = vai + "<a name='" + new Sumario(s).getAncora() + "'></a>" + "\n";
 		vai = vai + "<p><font size='3'>&nbsp;</font></p>" + "\n";
 
-		s = "<p><font size='3'><strong>" + new Sumario(s).getSubTitulo() + "</strong></font></p>";
+		s = "<p><font size='5'><strong>" + new Sumario(s).getSubTitulo() + "</strong></font></p>";
 
 		vai = vai + s + "\n";
 
