@@ -6,12 +6,12 @@
 	<property name="build-classes.dir" value="build/classes" />
 	<property name="build-classes-test.dir" value="build/classes-teste" />
 	<property name="destino-jar.dir" value="build/ParseClipBoard.jar" />
-	<property name="envia-jar.dir" value="C:/Transfere-LUANA/ParseClipBoard.jar" />
+	<property name="envia-jar.dir" value="C:\Users\rogeriop/ParseClipBoard.jar" />
 	<property name="relatorio-teste.dir" value="relatorio-teste" />
 
 	<path id="path-compilar-teste">
 		<pathelement path="${build-classes.dir}" />
-		<fileset dir="C:\eclipse-jee-indigo-SR2-win32\eclipse\plugins\org.junit_4.8.2.v4_8_2_v20110321-1705">
+		<fileset dir="C:\eclipse-EE\plugins\org.junit_4.12.0.v201504281640">
 			<include name="*.jar" />
 		</fileset>
 	</path>

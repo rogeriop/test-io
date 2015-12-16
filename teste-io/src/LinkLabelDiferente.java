@@ -1,5 +1,5 @@
 
-public class Link {
+public class LinkLabelDiferente {
 
 	public String transforma(String[] linhas) {
 

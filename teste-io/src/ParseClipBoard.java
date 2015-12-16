@@ -38,7 +38,7 @@ public class ParseClipBoard {
 				vai = new SubTitulo().transforma(vemEmLinhas);
 				break;
 			case "5":
-				vai = new Link().transforma(vemEmLinhas);
+				vai = new LinkLabelDiferente().transforma(vemEmLinhas);
 				break;
 			case "6":
 				vai = new Negrito().transforma(vemEmLinhas);
@@ -60,6 +60,9 @@ public class ParseClipBoard {
 				break;
 			case "12":
 				vai = new  FonteMaior().transforma(vemEmLinhas); 
+				break;
+			case "13":
+				vai = new  LinkMesmoLabel().transforma(vemEmLinhas); 
 				break;
 			}
 			

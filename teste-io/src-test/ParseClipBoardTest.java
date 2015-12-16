@@ -24,7 +24,7 @@ public class ParseClipBoardTest {
 	private static String[] TextoParaOTesteDaOpcao4;
 	private static String ResultadoEsperadoDaOpcao4;
 
-	// Opção 5-Link
+	// Opção 5-Link (diferente do label)
 	private static String[] TextoParaOTesteDaOpcao5;
 	private static String ResultadoEsperadoDaOpcao5;
 
@@ -55,6 +55,10 @@ public class ParseClipBoardTest {
 	// Opção 12-Fonte Maior
 	private static String[] TextoParaOTesteDaOpcao12;
 	private static String ResultadoEsperadoDaOpcao12;
+
+	// Opção 13-Link (mesmo que o label)
+	private static String[] TextoParaOTesteDaOpcao13;
+	private static String ResultadoEsperadoDaOpcao13;
 
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
@@ -119,6 +123,10 @@ public class ParseClipBoardTest {
 		TextoParaOTesteDaOpcao12 = opcao12.getCenarioEmLinhas();
 		ResultadoEsperadoDaOpcao12 = opcao12.getResultado();
 
+		// Cenário e Resultado Esperado da Opção 13
+		CenariosEResultadosEsperados opcao13 = new CenariosEResultadosEsperados("Opcao13TextoParaTeste.txt", "Opcao13ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao13 = opcao13.getCenarioEmLinhas();
+		ResultadoEsperadoDaOpcao13 = opcao13.getResultado();
 	}
 	
 	@Test
@@ -158,9 +166,9 @@ public class ParseClipBoardTest {
 	}
 
 	@Test
-	public void deveFormatarComoUmLink() {
+	public void deveFormatarComoUmLinkDeLabelDiferente() {
 		
-		String ResultadoGerado = new Link().transforma(TextoParaOTesteDaOpcao5);
+		String ResultadoGerado = new LinkLabelDiferente().transforma(TextoParaOTesteDaOpcao5);
 		
 		assertEquals(ResultadoEsperadoDaOpcao5, ResultadoGerado);
 		
@@ -226,6 +234,15 @@ public class ParseClipBoardTest {
 		String ResultadoGerado = new FonteMaior().transforma(TextoParaOTesteDaOpcao12);
 		
 		assertEquals(ResultadoEsperadoDaOpcao12, ResultadoGerado);
+		
+	}
+
+	@Test
+	public void deveFormatarComoUmLinkDeMesmoLabel() {
+		
+		String ResultadoGerado = new LinkMesmoLabel().transforma(TextoParaOTesteDaOpcao13);
+		
+		assertEquals(ResultadoEsperadoDaOpcao13, ResultadoGerado);
 		
 	}
 
