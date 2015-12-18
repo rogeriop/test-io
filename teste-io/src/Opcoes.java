@@ -24,6 +24,7 @@ public class Opcoes {
 			System.out.println("|  3-Lista Numerada | 10-Lista Numerada   |  7-Imagem                    |");
 			System.out.println("|                   | 11-Italico Vermelho |  8-SubTitulo Exercicios      |");
 			System.out.println("|                   | 12-Fonte Maior      | 13-Link (mesmo que o label)  |");
+			System.out.println("|                   |                     | 14-Estrutura de exercícios   |");
 			System.out.println("--------------------------------------------------------------------------");
 			System.out.println("Para encerrar digite 99. Informe o tipo:");
 			a = console.nextLine();
@@ -31,7 +32,7 @@ public class Opcoes {
 					&& !(a.equals("4"))  && !(a.equals("5"))  && !(a.equals("6"))
 					&& !(a.equals("7"))  && !(a.equals("8"))  && !(a.equals("9"))
 					&& !(a.equals("10")) && !(a.equals("11")) && !(a.equals("12")) 
-					&& !(a.equals("13")) && !(a.equals("99"))) {
+					&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("99"))) {
 				System.out.println("Nada Feito");
 			}
 			if (a.equals("7")) {
@@ -41,7 +42,7 @@ public class Opcoes {
 				&& !(a.equals("4"))  && !(a.equals("5"))  && !(a.equals("6"))
 				&& !(a.equals("7"))  && !(a.equals("8"))  && !(a.equals("9"))
 				&& !(a.equals("10")) && !(a.equals("11")) && !(a.equals("12"))
-				&& !(a.equals("13")) && !(a.equals("99")));
+				&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("99")));
 
 	}
 

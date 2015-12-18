@@ -37,7 +37,7 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao7;
 
 	// Opção 8-SubTítulo Exercício
-	private static String[] TextoParaOTesteDaOpcao8;
+	private static String TextoParaOTesteDaOpcao8;
 	private static String ResultadoEsperadoDaOpcao8;
 
 	// Opção 9-Fundo Cinza
@@ -59,6 +59,10 @@ public class ParseClipBoardTest {
 	// Opção 13-Link (mesmo que o label)
 	private static String[] TextoParaOTesteDaOpcao13;
 	private static String ResultadoEsperadoDaOpcao13;
+
+	// Opção 14-Link (mesmo que o label)
+	private static String[] TextoParaOTesteDaOpcao14;
+	private static String ResultadoEsperadoDaOpcao14;
 
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
@@ -100,7 +104,7 @@ public class ParseClipBoardTest {
 
 		// Cenário e Resultado Esperado da Opção 8
 		CenariosEResultadosEsperados opcao8 = new CenariosEResultadosEsperados("Opcao8TextoParaTeste.txt", "Opcao8ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao8 = opcao8.getCenarioEmLinhas();
+		TextoParaOTesteDaOpcao8 = opcao8.getCenario();
 		ResultadoEsperadoDaOpcao8 = opcao8.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 9
@@ -127,6 +131,11 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao13 = new CenariosEResultadosEsperados("Opcao13TextoParaTeste.txt", "Opcao13ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao13 = opcao13.getCenarioEmLinhas();
 		ResultadoEsperadoDaOpcao13 = opcao13.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 14
+		CenariosEResultadosEsperados opcao14 = new CenariosEResultadosEsperados("Opcao14TextoParaTeste.txt", "Opcao14ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao14 = opcao14.getCenarioEmLinhas();
+		ResultadoEsperadoDaOpcao14 = opcao14.getResultado();
 	}
 	
 	@Test
@@ -246,4 +255,13 @@ public class ParseClipBoardTest {
 		
 	}
 
+	@Test
+	public void deveFormatarAEstruturaDeExercicios() {
+		
+		String ResultadoGerado = new EstruturaExercicios().transforma(TextoParaOTesteDaOpcao14);
+		
+		assertEquals(ResultadoEsperadoDaOpcao14, ResultadoGerado);
+		
+	}
+	
 }

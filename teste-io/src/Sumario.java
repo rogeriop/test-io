@@ -3,12 +3,14 @@ public class Sumario {
 
 	private String s;
 	private String ancora = "";
+	private String letraAncora = "";
 	private String subTitulo = "";
 	private int nroAncora = 0;
 	
 	public Sumario(String s) {
 		this.s = s;
 		pegaAncora();
+		pegaLetraAncora();
 		pegaSubTitulo();
 		nroAncora = Integer.parseInt(ancora.substring(1));
 	}
@@ -24,6 +26,24 @@ public class Sumario {
 				i++;
 			}
 			if (i == 3)
+				break;
+			if (charArray[x] == '#') {
+				copiaAncora = true;
+			}
+		}
+	}
+
+	private void pegaLetraAncora() {
+
+		char charArray[] = s.toCharArray();
+		int i = 0;
+		boolean copiaAncora = false;
+		for (int x=0; x <= charArray.length; x ++) {
+			if (copiaAncora) {
+				letraAncora = letraAncora + charArray[x];
+				i++;
+			}
+			if (i == 1)
 				break;
 			if (charArray[x] == '#') {
 				copiaAncora = true;
@@ -50,6 +70,10 @@ public class Sumario {
 
 	public String getAncora() {
 		return ancora;
+	}
+
+	public String getLetraAncora() {
+		return letraAncora;
 	}
 
 	public String getSubTitulo() {

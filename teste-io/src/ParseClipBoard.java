@@ -47,7 +47,7 @@ public class ParseClipBoard {
 				vai = new Imagem().transforma(vemEmLinhas, opcoes.getWidth(), opcoes.getHeight());
 				break;
 			case "8":
-				vai = new  SubTituloDeExercicioOuResposta().transforma(vemEmLinhas);
+				vai = new  SubTituloDeExercicioOuResposta().transforma(vem);
 				break;
 			case "9":
 				vai = new  FundoCinza().tranforma(vem); 
@@ -63,6 +63,9 @@ public class ParseClipBoard {
 				break;
 			case "13":
 				vai = new  LinkMesmoLabel().transforma(vemEmLinhas); 
+				break;
+			case "14":
+				vai = new  EstruturaExercicios().transforma(vemEmLinhas); 
 				break;
 			}
 			

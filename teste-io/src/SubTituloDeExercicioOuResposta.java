@@ -1,21 +1,19 @@
 public class SubTituloDeExercicioOuResposta {
 
-	public String transforma(String[] linhas) {
+	public String transforma(String linha) {
 
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD
 		String vai = "";
 
-		String s = linhas[0];
-
-		s = s.replace("\"", "'");
+		linha = linha.replace("\"", "'");
 
 		// PÕE ENDEREÇO PARA O TÍTULO
-		vai = vai + "<a name='" + new Sumario(s).getAncora() + "'></a>" + "\n";
+		vai = vai + "<a name='" + new Sumario(linha).getAncora() + "'></a>" + "\n";
 		vai = vai + "<p><font size='3'>&nbsp;</font></p>" + "\n";
 
-		s = "<p><font size='5' color='gray'><strong>EX" + new Sumario(s).getNroAncora() + " - " + new Sumario(s).getSubTitulo() + "</strong></font></p>";
+		linha = "<p><font size='5' color='gray'><strong>" + ((new Sumario(linha).getLetraAncora().equals("E")) ? "EX" : "R.EX") + new Sumario(linha).getNroAncora() + " - " + new Sumario(linha).getSubTitulo() + "</strong></font></p>";
 
-		vai = vai + s + "\n";
+		vai = vai + linha + "\n";
 
 		vai = vai + "<p><font size='3'>&nbsp;</font></p>";
 
