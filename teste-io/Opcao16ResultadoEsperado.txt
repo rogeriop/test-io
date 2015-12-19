@@ -1,0 +1,5 @@
+<td>
+<a href='/share/proxy/alfresco/api/node/content/workspace/SpacesStore/c43e8c72-c02e-4e1c-9cc1-36c810c757f5/Certificado%20-%20XStream%20Consumindo%20o%20XML%20sem%20esfor%c3%a7o.pdf' target='_blank'> <img src='/share/proxy/alfresco/api/node/content/workspace/SpacesStore/9d87450c-2b01-425c-9477-fe8dd2f47216/Icon-diploma.jpg' alt='' width='90' height='137' />
+</td>
+<!-- -->
+ 

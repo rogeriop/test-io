@@ -1,5 +1,5 @@
 
-public class EstruturaExercicios implements Transforma{
+public class EstruturaExercicios implements TransformaLinhas{
 
 	@Override
 	public String transforma(String[] linhas) {
@@ -31,7 +31,7 @@ public class EstruturaExercicios implements Transforma{
 		titulosRespostasExercicios = constroiConteudoTitulos(linksRespostasExercicios, 0);
 		vai = vai + titulosRespostasExercicios;
 
-		return vai + "<!-- FIM -->";
+		return vai + "<!-- FIM -->\n ";
 	}
 
 	

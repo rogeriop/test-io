@@ -1,0 +1,4 @@
+<td align='center'>
+<a href='https://www.alura.com.br/user/23154/course/xstream/certificate' target='_blank'> <img src='/share/proxy/alfresco/api/node/content/workspace/SpacesStore/cf6b3ac2-f109-4f57-855e-22b07b04a1b0/diplomaTecla.jpg' alt='' width='30' height='30' /></a>
+</td>
+<!-- -->

@@ -1,4 +1,4 @@
 
-public interface Transforma {
+public interface TransformaLinhas {
 	String transforma(String[] linhas);
 }

@@ -60,9 +60,17 @@ public class ParseClipBoardTest {
 	private static String[] TextoParaOTesteDaOpcao13;
 	private static String ResultadoEsperadoDaOpcao13;
 
-	// Opção 14-Link (mesmo que o label)
+	// Opção 14-Estrutura de exercicios
 	private static String[] TextoParaOTesteDaOpcao14;
 	private static String ResultadoEsperadoDaOpcao14;
+
+	// Opção 15-Icone Tela
+	private static String TextoParaOTesteDaOpcao15;
+	private static String ResultadoEsperadoDaOpcao15;
+
+	// Opção 16-Icone Diploma
+	private static String TextoParaOTesteDaOpcao16;
+	private static String ResultadoEsperadoDaOpcao16;
 
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
@@ -136,6 +144,17 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao14 = new CenariosEResultadosEsperados("Opcao14TextoParaTeste.txt", "Opcao14ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao14 = opcao14.getCenarioEmLinhas();
 		ResultadoEsperadoDaOpcao14 = opcao14.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 15
+		CenariosEResultadosEsperados opcao15 = new CenariosEResultadosEsperados("Opcao15TextoParaTeste.txt", "Opcao15ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao15 = opcao15.getCenario();
+		ResultadoEsperadoDaOpcao15 = opcao15.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 16
+		CenariosEResultadosEsperados opcao16 = new CenariosEResultadosEsperados("Opcao16TextoParaTeste.txt", "Opcao16ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao16 = opcao16.getCenario();
+		ResultadoEsperadoDaOpcao16 = opcao16.getResultado();
+
 	}
 	
 	@Test
@@ -263,5 +282,23 @@ public class ParseClipBoardTest {
 		assertEquals(ResultadoEsperadoDaOpcao14, ResultadoGerado);
 		
 	}
-	
+
+	@Test
+	public void deveGerarIconeTecla() {
+		
+		String ResultadoGerado = new IconeTecla().transforma(TextoParaOTesteDaOpcao15);
+		
+		assertEquals(ResultadoEsperadoDaOpcao15, ResultadoGerado);
+		
+	}
+
+	@Test
+	public void deveGerarIconeDiploma() {
+		
+		String ResultadoGerado = new IconeDiploma().transforma(TextoParaOTesteDaOpcao16);
+		
+		assertEquals(ResultadoEsperadoDaOpcao16, ResultadoGerado);
+		
+	}
+
 }

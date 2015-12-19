@@ -67,6 +67,12 @@ public class ParseClipBoard {
 			case "14":
 				vai = new  EstruturaExercicios().transforma(vemEmLinhas); 
 				break;
+			case "15":
+				vai = new  IconeTecla().transforma(vem); 
+				break;
+			case "16":
+				vai = new  IconeDiploma().transforma(vem); 
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
