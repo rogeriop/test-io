@@ -60,7 +60,7 @@ public class EstruturaExercicios implements TransformaLinhas{
 
 		for (String s : linhas) {
 			auxTitulosExercicios = auxTitulosExercicios + new SubTituloDeExercicioOuResposta().transforma(s) + "\n";
-			auxTitulosExercicios = auxTitulosExercicios + "***********************************\n";
+			auxTitulosExercicios = auxTitulosExercicios + "<p>***********************************</p>\n";
 		}
 	
 		return auxTitulosExercicios;

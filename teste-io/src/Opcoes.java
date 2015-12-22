@@ -18,26 +18,28 @@ public class Opcoes {
 		do {
 
 			
-			System.out.println("------------------------------------------------------------------------------");
-			System.out.println("|    TRANSCREVE     |      FORMATA        |       GERA                       |");
-			System.out.println("------------------------------------------------------------------------------");
-			System.out.println("|  1-Codigo         |  6-Negrito          | 14-Estrutura de exercícios       |");
-			System.out.println("|  2-Paragrafo      |  9-Fundo Cinza      |  7-Imagem (linha)                |");
-			System.out.println("|  3-Lista Numerada | 10-Lista Numerada   |  5-Link (diferente do label)     |");
-			System.out.println("|                   | 11-Italico Vermelho | 13-Link (mesmo que o label)      |");
-			System.out.println("|                   | 12-Fonte Maior      |  4-SubTitulo Explicacao (linha)  |");
-			System.out.println("|                   |                     |  8-SubTitulo Exercicios (linha)  |");
-			System.out.println("|                   |                     | 15-Icone tecla (coluna)          |");
-			System.out.println("|                   |                     | 16-Icone Diploma (coluna)        |");
-			System.out.println("------------------------------------------------------------------------------");
+			System.out.println("---------------------------------------------------------------------------------------");
+			System.out.println("|    TRANSCREVE     |      FORMATA        |       GERA                                |");
+			System.out.println("---------------------------------------------------------------------------------------");
+			System.out.println("|(1)Codigo          |(12)Fonte maior      |(14)Estrutura de exercícios                |");
+			System.out.println("|(3)Lista Numerada  | (9)Fundo cinza      |(17)Estrutura de sub-titulos da explicacao |");
+			System.out.println("|(2)Paragrafo       |(11)Italico vermelho |(16)Icone Diploma (coluna)                 |");
+			System.out.println("|                   |(10)Lista numerada   |(15)Icone tecla (coluna)                   |");
+			System.out.println("|                   | (6)Negrito          | (7)Imagem (linha)                         |");
+			System.out.println("|                   |                     | (5)Link (diferente do label)              |");
+			System.out.println("|                   |                     |(13)Link (mesmo que o label)               |");
+			System.out.println("|                   |                     | (4)SubTitulo Explicacao (linha)           |");
+			System.out.println("|                   |                     | (8)SubTitulo Exercicios (linha)           |");
+			System.out.println("---------------------------------------------------------------------------------------");
 			System.out.println("Para encerrar digite 99. Informe o tipo:");
+
 			a = console.nextLine();
 			if (!(a.equals("1")) && !(a.equals("2")) && !(a.equals("3"))
 					&& !(a.equals("4"))  && !(a.equals("5"))  && !(a.equals("6"))
 					&& !(a.equals("7"))  && !(a.equals("8"))  && !(a.equals("9"))
 					&& !(a.equals("10")) && !(a.equals("11")) && !(a.equals("12")) 
 					&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
-					&& !(a.equals("16")) && !(a.equals("99"))) {
+					&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("99"))) {
 				System.out.println("Nada Feito");
 			}
 			if (a.equals("7")) {
@@ -48,7 +50,7 @@ public class Opcoes {
 				&& !(a.equals("7"))  && !(a.equals("8"))  && !(a.equals("9"))
 				&& !(a.equals("10")) && !(a.equals("11")) && !(a.equals("12"))
 				&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
-				&& !(a.equals("16")) && !(a.equals("99")));
+				&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("99")));
 
 	}
 

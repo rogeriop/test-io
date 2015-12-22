@@ -1,11 +1,11 @@
-public class SubTitulo {
+public class SubTitulo implements TransformaUmaLinha {
 
-	public String transforma(String[] linhas) {
+	public String transforma(String linha) {
 
 		// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD
 		String vai = "";
 
-		String s = linhas[0];
+		String s = linha;
 
 		s = s.replace("\"", "'");
 

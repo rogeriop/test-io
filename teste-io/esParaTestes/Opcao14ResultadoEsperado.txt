@@ -19,52 +19,52 @@
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>EX1 - Instalando o Maven</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='E02'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>EX2 - Trabalhando com um projeto Maven</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='E03'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>EX3 - Importando o projeto no Eclipse</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='E04'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>EX4 - Alternativas para gerenciar dependências</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='E05'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>EX5 - Outras ferramentas de gerenciamento de ciclo de build</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <!-- Titulos Respostas Exercicios -->
 <a name='R01'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>R.EX1 - Instalando o Maven</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='R02'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>R.EX2 - Trabalhando com um projeto Maven</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='R03'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>R.EX3 - Importando o projeto no Eclipse</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='R04'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>R.EX4 - Alternativas para gerenciar dependências</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <a name='R05'></a>
 <p><font size='3'>&nbsp;</font></p>
 <p><font size='5' color='gray'><strong>R.EX5 - Outras ferramentas de gerenciamento de ciclo de build</strong></font></p>
 <p><font size='3'>&nbsp;</font></p>
-***********************************
+<p>***********************************</p>
 <!-- FIM -->
  

@@ -35,7 +35,7 @@ public class ParseClipBoard {
 				vai = new ListaNumerada().transforma(vemEmLinhas);
 				break;
 			case "4":
-				vai = new SubTitulo().transforma(vemEmLinhas);
+				vai = new SubTitulo().transforma(vem);
 				break;
 			case "5":
 				vai = new LinkLabelDiferente().transforma(vemEmLinhas);
@@ -72,6 +72,9 @@ public class ParseClipBoard {
 				break;
 			case "16":
 				vai = new  IconeDiploma().transforma(vem); 
+				break;
+			case "17":
+				vai = new  EstruturaSubTitulosExplicacao().transforma(vemEmLinhas); 
 				break;
 			}
 			

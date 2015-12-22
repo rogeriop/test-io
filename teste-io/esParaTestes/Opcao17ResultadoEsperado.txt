@@ -1,0 +1,66 @@
+<!-- Links Explicacoes -->
+<ol>
+<li><a href='#B01'><font size='3' color='blue'><em>Downloads</em></font></a></li>
+<li><a href='#B02'><font size='3' color='blue'><em>Trabalhando com o banco de dados</em></font></a></li>
+<li><a href='#B03'><font size='3' color='blue'><em>O paradigma orientado a objetos</em></font></a></li>
+<li><a href='#B04'><font size='3' color='blue'><em>Evitando o SQL dentro do código Java</em></font></a></li>
+<li><a href='#B05'><font size='3' color='blue'><em>JDBC e SQL - problemas de manutenção</em></font></a></li>
+<li><a href='#B06'><font size='3' color='blue'><em>Persistir objetos sem escrever SQL</em></font></a></li>
+<li><a href='#B07'><font size='3' color='blue'><em>Unindo os dois mundos através do Mapeamento Objeto-Relacional</em></font></a></li>
+<li><a href='#B08'><font size='3' color='blue'><em>A Java Persistence API - JPA</em></font></a></li>
+<li><a href='#B09'><font size='3' color='blue'><em>O primeiro exemplo com JPA</em></font></a></li>
+<li><a href='#B10'><font size='3' color='blue'><em>Resumo</em></font></a></li>
+</ol>
+<!-- Sub-Titulos Explicacoes -->
+<a name='B01'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Downloads</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B02'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Trabalhando com o banco de dados</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B03'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>O paradigma orientado a objetos</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B04'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Evitando o SQL dentro do código Java</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B05'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>JDBC e SQL - problemas de manutenção</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B06'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Persistir objetos sem escrever SQL</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B07'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Unindo os dois mundos através do Mapeamento Objeto-Relacional</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B08'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>A Java Persistence API - JPA</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B09'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>O primeiro exemplo com JPA</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B10'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Resumo</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<!-- FIM -->
+ 

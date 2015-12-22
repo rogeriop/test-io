@@ -21,7 +21,7 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao3;
 
 	// Opção 4-SubTítulo Explicação
-	private static String[] TextoParaOTesteDaOpcao4;
+	private static String TextoParaOTesteDaOpcao4;
 	private static String ResultadoEsperadoDaOpcao4;
 
 	// Opção 5-Link (diferente do label)
@@ -72,6 +72,10 @@ public class ParseClipBoardTest {
 	private static String TextoParaOTesteDaOpcao16;
 	private static String ResultadoEsperadoDaOpcao16;
 
+	// Opção 17-Estrutura de sub-titulos da explicacao
+	private static String[] TextoParaOTesteDaOpcao17;
+	private static String ResultadoEsperadoDaOpcao17;
+
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
 		
@@ -92,7 +96,7 @@ public class ParseClipBoardTest {
 		
 		// Cenário e Resultado Esperado da Opção 4
 		CenariosEResultadosEsperados opcao4 = new CenariosEResultadosEsperados("Opcao4TextoParaTeste.txt", "Opcao4ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao4 = opcao4.getCenarioEmLinhas();
+		TextoParaOTesteDaOpcao4 = opcao4.getCenario();
 		ResultadoEsperadoDaOpcao4 = opcao4.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 5
@@ -154,6 +158,11 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao16 = new CenariosEResultadosEsperados("Opcao16TextoParaTeste.txt", "Opcao16ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao16 = opcao16.getCenario();
 		ResultadoEsperadoDaOpcao16 = opcao16.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 17
+		CenariosEResultadosEsperados opcao17 = new CenariosEResultadosEsperados("Opcao17TextoParaTeste.txt", "Opcao17ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao17 = opcao17.getCenarioEmLinhas();
+		ResultadoEsperadoDaOpcao17 = opcao17.getResultado();
 
 	}
 	
@@ -298,6 +307,15 @@ public class ParseClipBoardTest {
 		String ResultadoGerado = new IconeDiploma().transforma(TextoParaOTesteDaOpcao16);
 		
 		assertEquals(ResultadoEsperadoDaOpcao16, ResultadoGerado);
+		
+	}
+
+	@Test
+	public void deveFormatarAEstruturaDeSubTitulosExplicacao() {
+		
+		String ResultadoGerado = new EstruturaSubTitulosExplicacao().transforma(TextoParaOTesteDaOpcao17);
+		
+		assertEquals(ResultadoEsperadoDaOpcao17, ResultadoGerado);
 		
 	}
 

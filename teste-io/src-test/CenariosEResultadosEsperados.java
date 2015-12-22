@@ -17,8 +17,8 @@ public class CenariosEResultadosEsperados  {
 
 		boolean primeiro = true;
 
-		this.nomeArquivoTextoParaOTeste = nomeArquivoTextoParaOTeste;
-		this.nomeArquivoComResultadoEsperado = nomeArquivoComResultadoEsperado;
+		this.nomeArquivoTextoParaOTeste = "esParaTestes/" + nomeArquivoTextoParaOTeste;
+		this.nomeArquivoComResultadoEsperado = "esParaTestes/" + nomeArquivoComResultadoEsperado;
 		
 		// Monta o texto para o teste
 		Scanner sce = new Scanner(new FileInputStream(this.nomeArquivoTextoParaOTeste));
