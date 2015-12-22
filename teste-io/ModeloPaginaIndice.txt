@@ -1,0 +1,64 @@
+<table border='0'>
+<tbody>
+<tr>
+<td align='center' width='100%'>
+<h1><font size='5' color='#457f32'>SUM&Aacute;RIO</font></h1>
+</td>
+</tr>
+<tr valign='top'>
+<td>
+<table border='0'>
+<tbody>
+<tr>
+<td>
+<table border='0'>
+<tbody>
+<tr>
+<td align='right' width='15'><a href='/share/page/site/07-carreira-profissional/wiki-page?title=02_CURSOS_DA_ALURA&amp;listViewLinkBack=true' target='_self'><font size='3' color='blue'><em>Retorno</em></font></a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td><font size='3'><strong>RECURSOS</strong></font></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='right'><font size='3'>&nbsp;01 -&nbsp;</font></td>
+<td>O&nbsp;CURSO&nbsp;<font size='3'>nome@provedor.com;&nbsp;110</font></td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='right'><font size='3'>02 -&nbsp;</font></td>
+<td><font size='3'><em>Workspace: <font color='#FF0000'>NomeWorkspace</font>; Prefixo dos projetos: <font color='#FF0000'>nenhum</font>; M&aacute;quina:&nbsp;<font color='#FF0000'>10.0.0.122</font></em></font></td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='right'><font size='3'>03 -&nbsp;</font></td>
+<td><font size='3'><em>Projetos: <font color='#FF0000'>NomeProjeto</font></em></font></td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='right'><font size='3'>04 -&nbsp;</font></td>
+<td><font size='3'><em>Github Local:&nbsp;<font color='red'>CaminhoLocalProjeto;&nbsp;</font><a href='https://github.com/' target='_blank'><font color='blue'>Github Remoto</font></a></em></font></td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td><font size='3'><strong>LI&Ccedil;&Otilde;ES</strong></font></td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<!-- Titulos -->
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>

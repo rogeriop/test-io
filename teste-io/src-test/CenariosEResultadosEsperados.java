@@ -31,6 +31,8 @@ public class CenariosEResultadosEsperados  {
 			this.cenario = this.cenario + sce.nextLine();
 		}
 		
+		sce.close();
+		
 		// Quebra o cenario em linhas
 		cenarioEmLinhas = cenario.split("\n");
 
@@ -44,6 +46,8 @@ public class CenariosEResultadosEsperados  {
 			primeiro = false;
 			this.resultado = this.resultado + scs.nextLine();
 		}
+		
+		scs.close();
 
 	}
 

@@ -1,0 +1,6 @@
+Serializando e deserializando objetos e coleções em XML
+Relacionamentos, deserialização e refatoração
+Refatorações, referências, duplicidades e ciclos
+Coleções implícitas e Polimorfismo
+Costomizando o processo com conversores próprios
+Conversores complexos
