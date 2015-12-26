@@ -1,0 +1,118 @@
+<table border='0'>
+<tbody>
+<tr>
+<td align='center' width='100%'>
+<h1><font size='5' color='#457f32'>L I &Ccedil; &Atilde; O</font></h1>
+</td>
+</tr>
+<tr valign='top'>
+<td>
+<table border='0'>
+<tbody>
+<tr>
+<td>
+<table border='0'>
+<tbody>
+<tr>
+<!-- Retorno -->
+<td width='70%'>&nbsp;</td>
+<td width='70%'>&nbsp;</td>
+</tr>
+<tr>
+<td align='right' width='15%'>&nbsp;</td>
+<td>
+<p><font size='3' color='0000ff'><em>00 - V&Iacute;DEO AULA&nbsp;</em></font></p>
+<p><a href='#A01'><font size='3' color='#0000ff'><em>01 - EXPLICA&Ccedil;&Atilde;O</em></font></a></p>
+<p><a href='#A02'><font size='3' color='#0000ff'><em>02 - EXERC&Iacute;CIOS</em></font></a></p>
+<p><a href='#A03'><font size='3' color='#0000ff'><em>03 - RESPOSTAS DOS EXERC&Iacute;CIOS</em></font></a></p>
+<p><a href='#A04'><font size='3' color='#0000ff'><em>04 - MINHAS ANOTA&Ccedil;&Otilde;ES</em></font></a></p>
+<p><a name='A01'></a></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='center'>
+<p><em><font size='5'><strong>EXPLICA&Ccedil;&Atilde;O</strong></font></em></p>
+<p><em><font size='5'><strong><br /></strong></font></em></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td><a name='B01'></a>
+<p>*****************************************************************************************************</p>
+<a name='A02'></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='center'>
+<p><em><font size='5'><strong>EXERC&Iacute;CIOS&nbsp;</strong></font></em></p>
+<p><em><font size='5'><strong><br /></strong></font></em></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td>
+<p><font size='3'>&nbsp;</font></p>
+<p>************</p>
+<p><font size='3'>&nbsp;</font></p>
+<p>EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+<a name='A03'></a>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='center'>
+<p><em><font size='5'><strong>RESPOSTAS DOS EXERC&Iacute;CIOS</strong></font></em></p>
+<p><em><font size='5'><strong><br /></strong></font></em></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td>
+<p><font size='3'>&nbsp;</font></p>
+<p>************</p>
+<p><font size='3'>&nbsp;</font></p>
+<p>RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR</p>
+<p><span><a name='A04'></a></span></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td align='center'>
+<p><em><font size='5'><strong>MINHAS ANOTA&Ccedil;&Otilde;ES</strong></font></em>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td align='right'>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<!-- Retorno -->
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</p>

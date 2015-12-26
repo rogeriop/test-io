@@ -79,6 +79,9 @@ public class ParseClipBoard {
 			case "18":
 				vai = new  PaginaIndiceCurso().transforma(vemEmLinhas); 
 				break;
+			case "19":
+				vai = new  PaginaAulaCurso().transforma(vem); 
+				break;
 			}
 			
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD

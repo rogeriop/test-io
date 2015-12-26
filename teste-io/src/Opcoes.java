@@ -16,7 +16,6 @@ public class Opcoes {
 
 		// PEGA OPÇÕES NA LINHA DE COMANDO
 		do {
-
 			
 			System.out.println("---------------------------------------------------------------------------------------");
 			System.out.println("|    TRANSCREVE     |      FORMATA        |       GERA                                |");
@@ -28,6 +27,7 @@ public class Opcoes {
 			System.out.println("|                   | (6)Negrito          | (7)Imagem -> linha                        |");
 			System.out.println("|                   |                     | (5)Link diferente do label                |");
 			System.out.println("|                   |                     |(13)Link mesmo que o label                 |");
+			System.out.println("|                   |                     |(19)Pagina aula do curso                   |");
 			System.out.println("|                   |                     |(18)Pagina indice do curso                 |");
 			System.out.println("|                   |                     | (4)SubTitulo Explicacao -> linha          |");
 			System.out.println("|                   |                     | (8)SubTitulo Exercicios -> linha          |");
@@ -41,7 +41,7 @@ public class Opcoes {
 					&& !(a.equals("10")) && !(a.equals("11")) && !(a.equals("12")) 
 					&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
 					&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("18"))
-					&& !(a.equals("99"))) {
+					&& !(a.equals("19")) && !(a.equals("99"))) {
 				System.out.println("Nada Feito");
 			}
 			if (a.equals("7")) {
@@ -53,9 +53,9 @@ public class Opcoes {
 				&& !(a.equals("10")) && !(a.equals("11")) && !(a.equals("12"))
 				&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
 				&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("18"))
-				&& !(a.equals("99")));
+				&& !(a.equals("19")) && !(a.equals("99")));
 		
-		console.close();
+//		console.close();
 
 	}
 
@@ -90,7 +90,7 @@ public class Opcoes {
 			height = (int) (height * 0.5);
 		}
 
-		consolex.close();
+//		consolex.close();
 	}
 
 	public String getA() {

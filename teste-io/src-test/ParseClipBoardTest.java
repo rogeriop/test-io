@@ -80,6 +80,10 @@ public class ParseClipBoardTest {
 	private static String[] TextoParaOTesteDaOpcao18;
 	private static String ResultadoEsperadoDaOpcao18;
 
+	// Opção 19-Página aula do curso
+	private static String TextoParaOTesteDaOpcao19;
+	private static String ResultadoEsperadoDaOpcao19;
+
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
 		
@@ -172,6 +176,11 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao18 = new CenariosEResultadosEsperados("Opcao18TextoParaTeste.txt", "Opcao18ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao18 = opcao18.getCenarioEmLinhas();
 		ResultadoEsperadoDaOpcao18 = opcao18.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 19
+		CenariosEResultadosEsperados opcao19 = new CenariosEResultadosEsperados("Opcao19TextoParaTeste.txt", "Opcao19ResultadoEsperado.txt");
+		TextoParaOTesteDaOpcao19 = opcao19.getCenario();
+		ResultadoEsperadoDaOpcao19 = opcao19.getResultado();
 
 	}
 	
@@ -334,6 +343,15 @@ public class ParseClipBoardTest {
 		String ResultadoGerado = new PaginaIndiceCurso().transforma(TextoParaOTesteDaOpcao18);
 		
 		assertEquals(ResultadoEsperadoDaOpcao18, ResultadoGerado);
+		
+	}
+
+	@Test
+	public void deveGerarPaginaAulaDoCurso() {
+		
+		String ResultadoGerado = new PaginaAulaCurso().transforma(TextoParaOTesteDaOpcao19);
+		
+		assertEquals(ResultadoEsperadoDaOpcao19, ResultadoGerado);
 		
 	}
 
