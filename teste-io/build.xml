@@ -6,7 +6,7 @@
 	<property name="build-classes.dir" value="build/classes" />
 	<property name="build-classes-test.dir" value="build/classes-teste" />
 	<property name="destino-jar.dir" value="build/ParseClipBoard.jar" />
-	<property name="envia-jar.dir" value="C:\Users\rogeriop/ParseClipBoard.jar" />
+	<property name="envia-jar.dir" value="C:/Users/Antonio Rogerio/ParseClipBoard.jar" />
 	<property name="relatorio-teste.dir" value="relatorio-teste" />
 
 	<path id="path-compilar-teste">
