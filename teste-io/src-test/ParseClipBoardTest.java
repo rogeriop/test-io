@@ -25,7 +25,7 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao4;
 
 	// Opção 5-Link (diferente do label)
-	private static String[] TextoParaOTesteDaOpcao5;
+	private static String TextoParaOTesteDaOpcao5;
 	private static String ResultadoEsperadoDaOpcao5;
 
 	// Opção 6-Negrito
@@ -109,7 +109,7 @@ public class ParseClipBoardTest {
 
 		// Cenário e Resultado Esperado da Opção 5
 		CenariosEResultadosEsperados opcao5 = new CenariosEResultadosEsperados("Opcao5TextoParaTeste.txt", "Opcao5ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao5 = opcao5.getCenarioEmLinhas();
+		TextoParaOTesteDaOpcao5 = opcao5.getCenario();
 		ResultadoEsperadoDaOpcao5 = opcao5.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 6

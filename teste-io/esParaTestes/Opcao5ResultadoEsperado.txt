@@ -1,1 +1,1 @@
-<a href='http://www.oracle.com/technetwork/java/javase/downloads/index.html' target='_blank'><font size='3' color='blue'><em>**COLE-AQUI**</em></font></a>
+<a class='LinkLabelDiferente' href='http://www.oracle.com/technetwork/java/javase/downloads/index.html' target='_blank'><font size='3' color='blue'><em>**COLE-AQUI**</em></font></a>

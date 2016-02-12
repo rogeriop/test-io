@@ -21,7 +21,7 @@
 <tr>
 <td align='right' width='15%'>&nbsp;</td>
 <td>
-<p><font size='3' color='0000ff'><em>00 - V&Iacute;DEO AULA&nbsp;</em></font></p>
+<p>00 - V&Iacute;DEO AULA</p>
 <p><a href='#A01'><font size='3' color='#0000ff'><em>01 - EXPLICA&Ccedil;&Atilde;O</em></font></a></p>
 <p><a href='#A02'><font size='3' color='#0000ff'><em>02 - EXERC&Iacute;CIOS</em></font></a></p>
 <p><a href='#A03'><font size='3' color='#0000ff'><em>03 - RESPOSTAS DOS EXERC&Iacute;CIOS</em></font></a></p>
