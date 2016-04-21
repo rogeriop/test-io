@@ -7,7 +7,7 @@
 	<classpathentry kind="lib" path="lib-teste/junit-4.10.jar"/>
 	<classpathentry kind="lib" path="lib-teste/junit-dep-4.10.jar"/>
 	<classpathentry kind="lib" path="lib-teste/mockito-all-1.9.0.jar"/>
-	<classpathentry kind="lib" path="selenium-java-2.48.2.jar"/>
-	<classpathentry kind="lib" path="selenium-server-standalone-2.48.2.jar"/>
+	<classpathentry kind="lib" path="selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="selenium-java-2.53.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
