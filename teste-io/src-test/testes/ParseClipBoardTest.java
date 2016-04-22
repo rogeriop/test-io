@@ -15,16 +15,16 @@ import gera.manual.EstruturaExercicios;
 import gera.manual.EstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
-import gera.manual.Imagem;
-import gera.manual.LinkLabelDiferente;
-import gera.manual.LinkMesmoLabel;
 import gera.manual.PaginaAulaCurso;
 import gera.manual.PaginaIndiceCurso;
-import gera.manual.SubTitulo;
-import gera.manual.SubTituloDeExercicioOuResposta;
 import transcreve.Codigo;
+import transcreve.Imagem;
+import transcreve.LinkLabelDiferente;
+import transcreve.LinkMesmoLabel;
 import transcreve.ListaNumerada;
 import transcreve.Paragrafo;
+import transcreve.SubTitulo;
+import transcreve.SubTituloDeExercicioOuResposta;
 
 
 public class ParseClipBoardTest {

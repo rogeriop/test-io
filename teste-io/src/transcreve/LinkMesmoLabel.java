@@ -1,4 +1,4 @@
-package gera.manual;
+package transcreve;
 
 public class LinkMesmoLabel {
 	public String transforma(String[] linhas) {

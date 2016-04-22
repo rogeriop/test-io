@@ -10,8 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import comum.ClipBoard;
 import comum.Opcoes;
-import gera.manual.LinkLabelDiferente;
 import gera.manual.PaginaAulaCurso;
+import transcreve.LinkLabelDiferente;
 
 public class PaginasAulaCurso {
 	public void transforma(String linha, Opcoes opcoes) throws UnsupportedFlavorException, IOException {

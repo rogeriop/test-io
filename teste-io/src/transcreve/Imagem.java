@@ -1,4 +1,4 @@
-package gera.manual;
+package transcreve;
 public class Imagem {
 
 	public String transforma(String[] linhas, int width, int height) {

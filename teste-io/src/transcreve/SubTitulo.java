@@ -1,4 +1,4 @@
-package gera.manual;
+package transcreve;
 
 import comum.Sumario;
 import comum.TransformaUmaLinha;

@@ -1,6 +1,7 @@
 package gera.manual;
 
 import comum.TransformaLinhas;
+import transcreve.SubTitulo;
 
 public class EstruturaSubTitulosExplicacao implements TransformaLinhas {
 	

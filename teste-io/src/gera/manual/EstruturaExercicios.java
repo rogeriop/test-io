@@ -1,6 +1,7 @@
 package gera.manual;
 
 import comum.TransformaLinhas;
+import transcreve.SubTituloDeExercicioOuResposta;
 
 public class EstruturaExercicios implements TransformaLinhas{
 

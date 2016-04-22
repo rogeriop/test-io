@@ -19,23 +19,23 @@ public class Opcoes {
 		// PEGA OPÇÕES NA LINHA DE COMANDO
 		do {
 			
-			System.out.println("----------------------------------------------------------------------------------------------");
-			System.out.println("|    TRANSCREVE     |      FORMATA        |       GERA                                       |");
-			System.out.println("----------------------------------------------------------------------------------------------");
-			System.out.println("|(1)Codigo          |(12)Fonte maior      |(14)Estrutura de exercícios                       |");
-			System.out.println("|(3)Lista Numerada  | (9)Fundo cinza      |(17)Estrutura de sub-titulos da explicacao        |");
-			System.out.println("|(2)Paragrafo       |(11)Italico vermelho |(16)Icone Diploma -> coluna                       |");
-			System.out.println("|                   |(10)Lista numerada   |(15)Icone tecla -> coluna                         |");
-			System.out.println("|                   | (6)Negrito          | (7)Imagem -> linha                               |");
-			System.out.println("|                   |                     | (5)Link diferente do label                       |");
-			System.out.println("|                   |                     |(13)Link mesmo que o label                        |");
-			System.out.println("|                   |                     |(19)Pagina aula do curso                          |");
-			System.out.println("|                   |                     |(21)Cria Paginas aulas do curso -> Ações Alfresco |");
-			System.out.println("|                   |                     |(18)Pagina indice do curso                        |");
-			System.out.println("|                   |                     | (4)SubTitulo Explicacao -> linha                 |");
-			System.out.println("|                   |                     | (8)SubTitulo Exercicios -> linha                 |");
-			System.out.println("|                   |                     |(20)Cria Pastas de Aula  -> Ações Alfresco        |");
-			System.out.println("----------------------------------------------------------------------------------------------");
+			System.out.println("------------------------------------------------------------------------------------------------------");
+			System.out.println("| TRANSCREVE (para)               | FORMATA (para)      | GERA (um/uma/uns/umas)                     |");
+			System.out.println("------------------------------------------------------------------------------------------------------");
+			System.out.println("| (1)Codigo                       |(12)Fonte maior      |(14)Estrutura de exercícios                 |");
+			System.out.println("| (3)Lista Numerada               | (9)Fundo cinza      |(17)Estrutura de sub-titulos da explicacao  |");
+			System.out.println("| (5)Link (diferente label)       |(11)Italico vermelho |(16)Icone Diploma -> coluna                 |");
+			System.out.println("|(13)Link (mesmo label)           |(10)Lista numerada   |(15)Icone tecla -> coluna                   |");
+			System.out.println("| (7)Imagem -> linha              | (6)Negrito          |(19)Pagina aula do curso                    |");
+			System.out.println("| (2)Paragrafo                    |                     |(21)Paginas aulas do curso -> Ações Alfresco|");
+			System.out.println("| (4)SubTitulo Explicacao -> linha|                     |(18)Pagina indice do curso                  |");
+			System.out.println("| (8)SubTitulo Exercicios -> linha|                     |(20)Pastas de Aula  -> Ações Alfresco       |");
+			System.out.println("|                                 |                     |                                            |");
+			System.out.println("|                                 |                     |                                            |");
+			System.out.println("|                                 |                     |                                            |");
+			System.out.println("|                                 |                     |                                            |");
+			System.out.println("|                                 |                     |                                            |");
+			System.out.println("------------------------------------------------------------------------------------------------------");
 			System.out.println("Para encerrar digite 99. Informe o tipo:");
 
 			a = console.nextLine();
