@@ -9,55 +9,45 @@ public class Curso {
 	String nome;
 	String urlIndiceDoCurso;
 	String urlPastasDoCurso;
-	String gitHub;
+	String urlGitHub;
+	String urlCertificado;
 	List<Licao> licoes = new ArrayList<>();
 
-	public Curso(String codigo, String nome, String paginaIndiceDoCurso, String paginaPastasDoCurso, String gitHub) {
+	public Curso(String codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
-		this.urlIndiceDoCurso = paginaIndiceDoCurso;
-		this.urlPastasDoCurso = paginaPastasDoCurso;
-		this.gitHub = gitHub;
-	}
-	
-	public String getCodigo() {
-		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
-		this.codigo = codigo;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getPaginaIndiceDoCurso() {
+	public String getUrlIndiceDoCurso() {
 		return urlIndiceDoCurso;
 	}
 
-	public void setPaginaIndiceDoCurso(String paginaIndiceDoCurso) {
-		this.urlIndiceDoCurso = paginaIndiceDoCurso;
+	public void setUrlIndiceDoCurso(String urlIndiceDoCurso) {
+		this.urlIndiceDoCurso = urlIndiceDoCurso;
 	}
 
-	public String getPaginaPastasDoCurso() {
+	public String getUrlPastasDoCurso() {
 		return urlPastasDoCurso;
 	}
 
-	public void setPaginaPastasDoCurso(String paginaPastasDoCurso) {
-		this.urlPastasDoCurso = paginaPastasDoCurso;
+	public void setUrlPastasDoCurso(String urlPastasDoCurso) {
+		this.urlPastasDoCurso = urlPastasDoCurso;
 	}
 
-	public String getGitHub() {
-		return gitHub;
+	public String getUrlGitHub() {
+		return urlGitHub;
 	}
 
-	public void setGitHub(String gitHub) {
-		this.gitHub = gitHub;
+	public void setUrlGitHub(String urlGitHub) {
+		this.urlGitHub = urlGitHub;
+	}
+
+	public String getUrlCertificado() {
+		return urlCertificado;
+	}
+
+	public void setUrlCertificado(String urlCertificado) {
+		this.urlCertificado = urlCertificado;
 	}
 
 	public List<Licao> getLicoes() {
@@ -66,6 +56,14 @@ public class Curso {
 
 	public void setLicoes(List<Licao> licoes) {
 		this.licoes = licoes;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public String getNome() {
+		return nome;
 	}
 
 }

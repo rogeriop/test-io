@@ -17,6 +17,7 @@ import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
 import gera.manual.PaginaAulaCurso;
 import gera.manual.PaginaIndiceCurso;
+import gera.manual.XmlPadraoDoCurso;
 import transcreve.Codigo;
 import transcreve.Imagem;
 import transcreve.LinkLabelDiferente;
@@ -29,39 +30,39 @@ import transcreve.SubTituloDeExercicioOuResposta;
 
 public class ParseClipBoardTest {
 
-	// Opção 1-Código
+	// Opção  1-Código
 	private static String[] TextoParaOTesteDaOpcao1;
 	private static String ResultadoEsperadoDaOpcao1;
 
-	// Opção 2-Parágrafo
+	// Opção  2-Parágrafo
 	private static String[] TextoParaOTesteDaOpcao2;
 	private static String ResultadoEsperadoDaOpcao2;
 	
-	// Opção 3-Lista Numerada
+	// Opção  3-Lista Numerada
 	private static String[] TextoParaOTesteDaOpcao3;
 	private static String ResultadoEsperadoDaOpcao3;
 
-	// Opção 4-SubTítulo Explicação
+	// Opção  4-SubTítulo Explicação
 	private static String TextoParaOTesteDaOpcao4;
 	private static String ResultadoEsperadoDaOpcao4;
 
-	// Opção 5-Link (diferente do label)
+	// Opção  5-Link (diferente do label)
 	private static String TextoParaOTesteDaOpcao5;
 	private static String ResultadoEsperadoDaOpcao5;
 
-	// Opção 6-Negrito
+	// Opção  6-Negrito
 	private static String[] TextoParaOTesteDaOpcao6;
 	private static String ResultadoEsperadoDaOpcao6;
 
-	// Opção 7-Imagem
+	// Opção  7-Imagem
 	private static String[] TextoParaOTesteDaOpcao7;
 	private static String ResultadoEsperadoDaOpcao7;
 
-	// Opção 8-SubTítulo Exercício
+	// Opção  8-SubTítulo Exercício
 	private static String TextoParaOTesteDaOpcao8;
 	private static String ResultadoEsperadoDaOpcao8;
 
-	// Opção 9-Fundo Cinza
+	// Opção  9-Fundo Cinza
 	private static String TextoParaOTesteDaOpcao9;
 	private static String ResultadoEsperadoDaOpcao9;
 
@@ -104,6 +105,9 @@ public class ParseClipBoardTest {
 	// Opção 19-Página aula do curso
 	private static String TextoParaOTesteDaOpcao19;
 	private static String ResultadoEsperadoDaOpcao19;
+
+	// Opção 22-XML do Curso
+	private static String ResultadoEsperadoDaOpcao22;
 
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
@@ -202,6 +206,10 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao19 = new CenariosEResultadosEsperados("Opcao19TextoParaTeste.txt", "Opcao19ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao19 = opcao19.getCenario();
 		ResultadoEsperadoDaOpcao19 = opcao19.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 22
+		CenariosEResultadosEsperados opcao22 = new CenariosEResultadosEsperados(null, "Opcao22ResultadoEsperado.txt");
+		ResultadoEsperadoDaOpcao22 = opcao22.getResultado();
 
 	}
 	
@@ -376,4 +384,14 @@ public class ParseClipBoardTest {
 		
 	}
 
+	@Test
+	public void deveGerarXmlDoCurso() {
+		
+		String ResultadoGerado = new XmlPadraoDoCurso().transforma();
+		
+		assertEquals(ResultadoEsperadoDaOpcao22, ResultadoGerado);
+		
+	}
+	
+	
 }

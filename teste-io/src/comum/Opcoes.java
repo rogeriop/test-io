@@ -30,7 +30,7 @@ public class Opcoes {
 			System.out.println("| (2)Paragrafo                    |                     |(21)Paginas aulas do curso -> Ações Alfresco|");
 			System.out.println("| (4)SubTitulo Explicacao -> linha|                     |(18)Pagina indice do curso                  |");
 			System.out.println("| (8)SubTitulo Exercicios -> linha|                     |(20)Pastas de Aula  -> Ações Alfresco       |");
-			System.out.println("|                                 |                     |                                            |");
+			System.out.println("|                                 |                     |(22)XML padrão do Curso                     |");
 			System.out.println("|                                 |                     |                                            |");
 			System.out.println("|                                 |                     |                                            |");
 			System.out.println("|                                 |                     |                                            |");
@@ -46,7 +46,7 @@ public class Opcoes {
 					&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
 					&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("18"))
 					&& !(a.equals("19")) && !(a.equals("20")) && !(a.equals("21"))
-					&& !(a.equals("99"))) {
+					&& !(a.equals("22")) && !(a.equals("99"))) {
 				System.out.println("Nada Feito");
 			}
 			if (a.equals("7")) {
@@ -62,7 +62,7 @@ public class Opcoes {
 				&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
 				&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("18"))
 				&& !(a.equals("19")) && !(a.equals("20")) && !(a.equals("21"))
-				&& !(a.equals("99")));
+				&& !(a.equals("22")) && !(a.equals("99")));
 		
 //		console.close();
 

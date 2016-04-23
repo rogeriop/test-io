@@ -16,6 +16,7 @@ import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
 import gera.manual.PaginaAulaCurso;
 import gera.manual.PaginaIndiceCurso;
+import gera.manual.XmlPadraoDoCurso;
 import transcreve.Codigo;
 import transcreve.Imagem;
 import transcreve.LinkLabelDiferente;
@@ -40,6 +41,7 @@ public class ParseClipBoard {
 
 			// RECEBE CONTEÚDO DO CLIPBOARD
 			String vem = clipBoard.obtem();
+			if (vem == null) vem = "Bem vindo ao ParseClipBoard";
 			
 			// CRIA ARRAY DE LINHAS
 			String[] vemEmLinhas = vem.split("\n");
@@ -100,6 +102,7 @@ public class ParseClipBoard {
 				vai = new  EstruturaSubTitulosExplicacao().transforma(vemEmLinhas); 
 				break;
 			case "18":
+				vemEmLinhas = ExtraiVaiDeXml.opcao18(vem).split("\n");
 				vai = new  PaginaIndiceCurso().transforma(vemEmLinhas); 
 				break;
 			case "19":
@@ -110,6 +113,9 @@ public class ParseClipBoard {
 				break;
 			case "21":
 				new  PaginasAulaCurso().transforma(vem, opcoes); 
+				break;
+			case "22":
+				vai = new  XmlPadraoDoCurso().transforma(); 
 				break;
 			}
 			

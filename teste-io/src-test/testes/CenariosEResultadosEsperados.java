@@ -1,5 +1,6 @@
 package testes;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -16,11 +17,34 @@ public class CenariosEResultadosEsperados  {
 	public CenariosEResultadosEsperados(String nomeArquivoTextoParaOTeste,	
 			String nomeArquivoComResultadoEsperado) throws IOException {
 
-		boolean primeiro = true;
 
 		this.nomeArquivoTextoParaOTeste = "esParaTestes/" + nomeArquivoTextoParaOTeste;
 		this.nomeArquivoComResultadoEsperado = "esParaTestes/" + nomeArquivoComResultadoEsperado;
 		
+		if (nomeArquivoTextoParaOTeste != null) montaTextoParaOTeste();
+
+		montaTextoDoResultadoEsperado();
+
+	}
+
+	private void montaTextoDoResultadoEsperado() throws FileNotFoundException {
+		// Monta Resultado Esperado
+		Scanner scs = new Scanner(new FileInputStream(this.nomeArquivoComResultadoEsperado));
+		boolean primeiro = true;
+		while(scs.hasNextLine()) {
+			if(!primeiro) {
+				this.resultado = this.resultado + "\n";
+			}
+			primeiro = false;
+			this.resultado = this.resultado + scs.nextLine();
+		}
+		
+		scs.close();
+	}
+
+	private void montaTextoParaOTeste() throws FileNotFoundException {
+		boolean primeiro = true;
+
 		// Monta o texto para o teste
 		Scanner sce = new Scanner(new FileInputStream(this.nomeArquivoTextoParaOTeste));
 		while(sce.hasNextLine()) {
@@ -36,20 +60,6 @@ public class CenariosEResultadosEsperados  {
 		
 		// Quebra o cenario em linhas
 		cenarioEmLinhas = cenario.split("\n");
-
-		// Monta Resultado Esperado
-		Scanner scs = new Scanner(new FileInputStream(this.nomeArquivoComResultadoEsperado));
-		primeiro = true;
-		while(scs.hasNextLine()) {
-			if(!primeiro) {
-				this.resultado = this.resultado + "\n";
-			}
-			primeiro = false;
-			this.resultado = this.resultado + scs.nextLine();
-		}
-		
-		scs.close();
-
 	}
 
 	public String getCenario() {

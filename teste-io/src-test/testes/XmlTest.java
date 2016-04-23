@@ -14,7 +14,7 @@ public class XmlTest {
 		
 		List<Licao> licoes = new ArrayList<>();
 		
-		Curso curso = new Curso("01", "Refatorando na prática", "http://", "http://", "https://github.com/rogeriop/curso-refatoracao.git");
+		Curso curso = new Curso("01", "Refatorando na prática");
 
 		licoes.add(new Licao("01", "Extraindo métodos e classes"));
 		licoes.add(new Licao("02", "Nomes mais legíveis"));
@@ -22,6 +22,7 @@ public class XmlTest {
 		licoes.add(new Licao("04", "Código duplicado"));
 		licoes.add(new Licao("05", "Parâmetros booleanos"));
 		licoes.add(new Licao("06", "Removendo Números mágicos"));
+
 		
 		curso.setLicoes(licoes);
 		
