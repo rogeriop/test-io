@@ -14,7 +14,7 @@ public class SerializacaoTest {
 	
 	public void devConverterParaXml() {
 
-		Curso curso = new Curso("01", "Nome do Curso");
+		Curso curso = new Curso("01", "Nome do Curso", "01/11/2014");
 		curso.setUrlIndiceDoCurso("http://");
 		curso.setUrlPastasDoCurso("http://");
 		curso.setUrlCertificado("http://");

@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import comum.Curso;
 import formata.FonteMaior;
 import formata.FundoCinza;
 import formata.ItalicoVermelho;
@@ -30,6 +31,8 @@ import transcreve.SubTituloDeExercicioOuResposta;
 
 public class ParseClipBoardTest {
 
+	// PARA TODAS AS OPCOES QUE USAREM XML COMO ENTRADA
+	
 	// Opção  1-Código
 	private static String[] TextoParaOTesteDaOpcao1;
 	private static String ResultadoEsperadoDaOpcao1;
@@ -99,7 +102,7 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao17;
 
 	// Opção 18-Página índice do curso
-	private static String[] TextoParaOTesteDaOpcao18;
+	private static Curso curso18;
 	private static String ResultadoEsperadoDaOpcao18;
 
 	// Opção 19-Página aula do curso
@@ -107,6 +110,8 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao19;
 
 	// Opção 22-XML do Curso
+
+	private static Curso curso22;
 	private static String ResultadoEsperadoDaOpcao22;
 
 	@BeforeClass
@@ -198,17 +203,18 @@ public class ParseClipBoardTest {
 		ResultadoEsperadoDaOpcao17 = opcao17.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 18
-		CenariosEResultadosEsperados opcao18 = new CenariosEResultadosEsperados("Opcao18TextoParaTeste.txt", "Opcao18ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao18 = opcao18.getCenarioEmLinhas();
+		CenariosEResultadosEsperados opcao18 = new CenariosEResultadosEsperados(true, "Opcao18TextoParaTeste.txt", "Opcao18ResultadoEsperado.txt");
+		curso18 = opcao18.getCurso();
 		ResultadoEsperadoDaOpcao18 = opcao18.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 19
-		CenariosEResultadosEsperados opcao19 = new CenariosEResultadosEsperados("Opcao19TextoParaTeste.txt", "Opcao19ResultadoEsperado.txt");
+ 		CenariosEResultadosEsperados opcao19 = new CenariosEResultadosEsperados("Opcao19TextoParaTeste.txt", "Opcao19ResultadoEsperado.txt");
 		TextoParaOTesteDaOpcao19 = opcao19.getCenario();
 		ResultadoEsperadoDaOpcao19 = opcao19.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 22
 		CenariosEResultadosEsperados opcao22 = new CenariosEResultadosEsperados(null, "Opcao22ResultadoEsperado.txt");
+		curso22 = new Curso("01", "Nome do Curso", "01/11/2014");
 		ResultadoEsperadoDaOpcao22 = opcao22.getResultado();
 
 	}
@@ -369,7 +375,7 @@ public class ParseClipBoardTest {
 	@Test
 	public void deveGerarPaginaIndiceDoCurso() {
 		
-		String ResultadoGerado = new PaginaIndiceCurso().transforma(TextoParaOTesteDaOpcao18);
+		String ResultadoGerado = new PaginaIndiceCurso().transforma(curso18);
 		
 		assertEquals(ResultadoEsperadoDaOpcao18, ResultadoGerado);
 		
@@ -385,9 +391,9 @@ public class ParseClipBoardTest {
 	}
 
 	@Test
-	public void deveGerarXmlDoCurso() {
+	public void deveGerarXmlPadraoDoCurso() {
 		
-		String ResultadoGerado = new XmlPadraoDoCurso().transforma();
+		String ResultadoGerado = new XmlPadraoDoCurso().transforma(curso22);
 		
 		assertEquals(ResultadoEsperadoDaOpcao22, ResultadoGerado);
 		

@@ -4,6 +4,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
+import comum.ConverteXmlParaCurso;
+import comum.Curso;
+
 
 public class CenariosEResultadosEsperados  {
 
@@ -13,6 +16,8 @@ public class CenariosEResultadosEsperados  {
 	private String[] cenarioEmLinhas;
 	private String cenario = "";
 	private String resultado = "";
+
+	private Curso curso;
 	
 	public CenariosEResultadosEsperados(String nomeArquivoTextoParaOTeste,	
 			String nomeArquivoComResultadoEsperado) throws IOException {
@@ -26,6 +31,23 @@ public class CenariosEResultadosEsperados  {
 		montaTextoDoResultadoEsperado();
 
 	}
+
+	public CenariosEResultadosEsperados(boolean textoParaOTesteEhXml, String nomeArquivoTextoParaOTeste,	
+			String nomeArquivoComResultadoEsperado) throws IOException {
+
+
+		this.nomeArquivoTextoParaOTeste = "esParaTestes/" + nomeArquivoTextoParaOTeste;
+		this.nomeArquivoComResultadoEsperado = "esParaTestes/" + nomeArquivoComResultadoEsperado;
+		
+		if (nomeArquivoTextoParaOTeste != null) {
+			montaTextoParaOTeste();
+			this.curso = ConverteXmlParaCurso.cursoDeXml(cenario);
+		}
+
+		montaTextoDoResultadoEsperado();
+
+	}
+
 
 	private void montaTextoDoResultadoEsperado() throws FileNotFoundException {
 		// Monta Resultado Esperado
@@ -61,6 +83,7 @@ public class CenariosEResultadosEsperados  {
 		// Quebra o cenario em linhas
 		cenarioEmLinhas = cenario.split("\n");
 	}
+	
 
 	public String getCenario() {
 		return this.cenario;
@@ -72,6 +95,10 @@ public class CenariosEResultadosEsperados  {
 	
 	public String getResultado() {
 		return this.resultado;
+	}
+
+	public Curso getCurso() {
+		return this.curso;
 	}
 
 }

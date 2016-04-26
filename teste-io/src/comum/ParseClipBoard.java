@@ -46,9 +46,12 @@ public class ParseClipBoard {
 			// CRIA ARRAY DE LINHAS
 			String[] vemEmLinhas = vem.split("\n");
 
+			// PARA MIGRAÇÃO XML
+			Curso curso;
+			
 			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 			String vai = "";
-
+			
 			switch (opcoes.getA()) {
 			case "1":
 				vai = new Codigo().transforma(vemEmLinhas);
@@ -102,8 +105,8 @@ public class ParseClipBoard {
 				vai = new  EstruturaSubTitulosExplicacao().transforma(vemEmLinhas); 
 				break;
 			case "18":
-				vemEmLinhas = ExtraiVaiDeXml.opcao18(vem).split("\n");
-				vai = new  PaginaIndiceCurso().transforma(vemEmLinhas); 
+				curso = ConverteXmlParaCurso.cursoDeXml(vem);
+				vai = new  PaginaIndiceCurso().transforma(curso); 
 				break;
 			case "19":
 				vai = new  PaginaAulaCurso().transforma(vem); 
@@ -115,7 +118,8 @@ public class ParseClipBoard {
 				new  PaginasAulaCurso().transforma(vem, opcoes); 
 				break;
 			case "22":
-				vai = new  XmlPadraoDoCurso().transforma(); 
+				curso = new Curso("01", "Nome do Curso", "01/11/2014");
+				vai = new  XmlPadraoDoCurso().transforma(curso); 
 				break;
 			}
 			

@@ -3,22 +3,39 @@ package gera.manual;
 import java.util.ArrayList;
 import java.util.List;
 
-import comum.Curso;
 import comum.ConverteCursoParaXml;
+import comum.Curso;
 import comum.Licao;
-import comum.TransformaNenhumaLinha;
+import comum.UsaCurso;
 import comum.Video;
 
-public class XmlPadraoDoCurso implements TransformaNenhumaLinha {
+public class XmlPadraoDoCurso implements UsaCurso {
 
 	@Override
-	public String transforma() {
+	public String transforma(Curso curso) {
 
-		Curso curso = new Curso("01", "Nome do Curso");
+		curso.setDataFim("30/11/2014");
+		
 		curso.setUrlIndiceDoCurso("http://");
 		curso.setUrlPastasDoCurso("http://");
 		curso.setUrlCertificado("http://");
+		
+		// LINHA 01 PÁGINA ÍNDICE
+		curso.setUrlCurso("http://www.google.com.br");
+		curso.setEmailAluno("nome@provedor.com");
+		curso.setSenhaAluno("110");
+		
+		// LINHA 02 PÁGINA ÍNDICE (RECURSOS)
+		curso.setNomeWorkspace("NomeWorkspace");
+		curso.setIpMaquina("10.0.0.122");
+		
+		// LINHA 03 PÁGINA ÍNDICE (RECURSOS)
+		curso.setNomeProjeto("NomeProjeto");
+		
+		// LINHA 04 PÁGINA ÍNDICE (RECURSOS)
 		curso.setUrlGitHub("http://");
+		curso.setPastaGitHubLocal("CaminhoLocalProjeto");;
+		
 		List<Licao> licoes = new ArrayList<>();
 
 		licoes.add(montaLicao(new Licao("01", "A")));
