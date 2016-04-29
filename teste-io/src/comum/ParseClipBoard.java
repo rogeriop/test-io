@@ -107,12 +107,13 @@ public class ParseClipBoard {
 			case "18":
 				curso = ConverteXmlParaCurso.cursoDeXml(vem);
 				vai = new  PaginaIndiceCurso().transforma(curso); 
-				break;
+				break; 
 			case "19":
 				vai = new  PaginaAulaCurso().transforma(vem); 
 				break;
 			case "20":
-				new  PastaDeCursos().transforma(vem); 
+				curso = ConverteXmlParaCurso.cursoDeXml(vem);
+				vai = new  PastaDeCursos().transforma(curso); 
 				break;
 			case "21":
 				new  PaginasAulaCurso().transforma(vem, opcoes); 

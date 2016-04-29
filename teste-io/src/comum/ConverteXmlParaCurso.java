@@ -11,6 +11,7 @@ public class ConverteXmlParaCurso {
 		xstream.alias("licao", Licao.class);
 		xstream.alias("video", Video.class);
 		
+		xml = xml.replace("&", "&amp;");		
 		return (Curso) xstream.fromXML(xml);
 		
 	}
