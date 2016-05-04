@@ -12,8 +12,6 @@ import comum.UsaCurso;
 public class PaginaIndiceCurso implements UsaCurso {
 
 	// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD
-	private String vai = "";
-	private String aux;
 	private Curso curso;
 	private List<Licao> licoes;
 
@@ -21,21 +19,21 @@ public class PaginaIndiceCurso implements UsaCurso {
 	public String transforma(Curso curso) {
 		
 		this.curso = curso;
-		licoes = curso.getLicoes();
+		this.licoes = curso.getLicoes();
+		String vai = "";
 
 		try {
 			// LÊ ARQUIVO MODÊLO PROCURANDO PARA INTERCALAR TÍTULOS E RECURSOS
 			Scanner sce = new Scanner(new FileInputStream("ModeloPaginaIndice.txt"));
+
 			while (sce.hasNextLine()) {
-				aux = sce.nextLine();
+				String aux = sce.nextLine();
 				if (aux.equals("<!-- Titulos -->")) {
-					aux = insereTitulosLicoes();
-					vai = vai + aux;
+					vai += insereTitulosLicoes();
 				} else if (aux.equals("<!-- Recursos -->")) {
-					aux = insereRecursosDaLicao();
-					vai = vai + aux;
+					vai += insereRecursosDaLicao();
 				} else {
-					vai = vai + aux + "\n";
+					vai += aux + "\n";
 				}
 			}
 			sce.close();
@@ -44,7 +42,7 @@ public class PaginaIndiceCurso implements UsaCurso {
 			e.printStackTrace();
 		}
 
-		return vai = vai + " ";
+		return vai += " ";
 
 	}
 
@@ -56,12 +54,12 @@ public class PaginaIndiceCurso implements UsaCurso {
 		
 		// PREPARA LINHA 01
 		s = "O&nbsp;<a href='" + curso.getUrlCurso() + "' target='_blank'><font color='blue'><em>CURSO</em></font></a><font size='3'>&nbsp;" +
-		curso.getEmailAluno() + ";&nbsp;" + curso.getSenhaAluno() + "</font>";
+			curso.getEmailAluno() + ";&nbsp;" + curso.getSenhaAluno() + "</font>";
 		conteudo = geraLinhaDaTabela(conteudo, "01", s);
 		
 		//PREPARA LINHA 02
 		s = "<em>Workspace: <font color='#FF0000'>" + curso.getNomeWorkspace() + "</font>;" + 
-		" M&aacute;quina:&nbsp;<font color='#FF0000'>" + curso.getIpMaquina() + "</font></em>";
+			" M&aacute;quina:&nbsp;<font color='#FF0000'>" + curso.getIpMaquina() + "</font></em>";
 		conteudo = geraLinhaDaTabela(conteudo, "02", s);
 		
 		// PREPARA LINHA 03
@@ -70,7 +68,7 @@ public class PaginaIndiceCurso implements UsaCurso {
 
 		// PREPARA LINHA 04
 		s = "<em>Github Local:&nbsp;<font color='red'>" + curso.getPastaGitHubLocal() + 
-				";&nbsp;</font><a href='" + curso.getUrlGitHub() + "' target='_blank'><font color='blue'>Github Remoto</font></a></em>";
+			";&nbsp;</font><a href='" + curso.getUrlGitHub() + "' target='_blank'><font color='blue'>Github Remoto</font></a></em>";
 		conteudo = geraLinhaDaTabela(conteudo, "04", s);
 
 		return conteudo;
@@ -94,7 +92,7 @@ public class PaginaIndiceCurso implements UsaCurso {
 		return conteudo;
 	}
 
-	// FORMATA A LINHA DA TABELA
+	// GERA A LINHA DA TABELA
 	private String geraLinhaDaTabela(String conteudo, String codigo, String s) {
 		conteudo += "<tr>\n";
 		conteudo += "<td align='right'>&nbsp;</td>\n";

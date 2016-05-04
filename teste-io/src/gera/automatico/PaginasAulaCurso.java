@@ -1,6 +1,8 @@
 package gera.automatico;
+
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,91 +11,71 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import comum.ClipBoard;
+import comum.Curso;
+import comum.Licao;
 import comum.Opcoes;
 import gera.manual.PaginaAulaCurso;
 import transcreve.LinkLabelDiferente;
 
 public class PaginasAulaCurso {
-	public void transforma(String linha, Opcoes opcoes) throws UnsupportedFlavorException, IOException {
+	public void transforma(Curso curso) throws UnsupportedFlavorException, IOException {
 
 		WebDriver driver = new FirefoxDriver();
 		WebDriverWait wait = new WebDriverWait(driver, 90);
 
-		String[] linhas = linha.split("\n");
-		int contadorDeLinhas = opcoes.getNumeracao() - 1;
-		
+		List<Licao> licoes = curso.getLicoes();
+
 		// URL DA PÁGINA DE ÍNDICE DO CURSO
-		driver.get(linhas[0]);
+		String urlPaginaIndiceDoCurso = curso.getUrlIndiceDoCurso();
+		driver.get(urlPaginaIndiceDoCurso);
 		driver.manage().window().maximize();
 
-		boolean primeiraLinha = true;
+		for (Licao licao : licoes) {
 
-		for (String s : linhas) {
+			String s = licao.getNome();
+			String codigo = licao.getCodigo();
 
-			if (!primeiraLinha) {
+			// RETIRA CARCTERES NÃO SUPORTADOS
+			s.replace("?", "");
+			s.replace(":", ";");
 
-				// Tira caracteres não suportados
-				s.replace("?", "");
-				s.replace(":", ";");
+			// ACIONA BOTÃO PARA CRIAR NOVA PÁGINA
+			wait.until(ExpectedConditions.presenceOfElementLocated(
+					By.id("template_x002e_toolbar_x002e_wiki-page_x0023_default-create-button-button")));
+			driver.findElement(By.id("template_x002e_toolbar_x002e_wiki-page_x0023_default-create-button-button"))
+					.click();
 
-				contadorDeLinhas++;
+			// PREENCHE O TÍTULO DA PÁGINA
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.name("pageTitle")));
+			driver.findElement(By.name("pageTitle"))
+					.sendKeys(codigo + " " + s);
 
-				// ACIONA BOTÃO PARA CRIAR NOVA PÁGINA
-				wait.until(ExpectedConditions.presenceOfElementLocated(
-						By.id("template_x002e_toolbar_x002e_wiki-page_x0023_default-create-button-button")));
-				driver.findElement(By.id("template_x002e_toolbar_x002e_wiki-page_x0023_default-create-button-button"))
-						.click();
+			// CONSTROI A PÁGINA DE AULA DO CURSO
+			new ClipBoard().copia(new PaginaAulaCurso().transforma(curso, licao));
 
-				// PREENCHE O TÍTULO DA PÁGINA
-				wait.until(ExpectedConditions.presenceOfElementLocated(
-						By.name("pageTitle")));
-				driver.findElement(By.name("pageTitle"))
-						.sendKeys(((contadorDeLinhas < 10) ? "0" : "") + contadorDeLinhas + " " + s);
+			// ACIONA O BOTÃO PARA O EDITOR DE HTML
+			driver.findElement(By.cssSelector("span.mce_code")).click();
 
-				// CONSTROI A PÁGINA DE AULA DO CURSO
-				new ClipBoard().copia(new PaginaAulaCurso().transforma(linhas[0]));
-				
-				// ACIONA O BOTÃO PARA O EDITOR DE HTML
-				driver.findElement(
-						By.cssSelector("span.mce_code")).click();
+			// PEGA URL DA PÁGINA NOVA CRIADA E TRANSFORMA NUM LINK
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Retorno")));
+			new ClipBoard()
+					.copia(new LinkLabelDiferente().transforma(driver.getCurrentUrl()).replace("_blank", "_self"));
 
-				// ACIONA BOTÃO DE SALVAR (COMENTADO TEMPORARIAMENTE PARA NÃO INDUZIR USUÁRIO AO ERRO)
-				/*
-				wait.until(ExpectedConditions.elementToBeClickable(
-						By.id("template_x002e_createform_x002e_wiki-create_x0023_default-save-button-button")));
-				driver.findElement(
-						By.id("template_x002e_createform_x002e_wiki-create_x0023_default-save-button-button")).click();
-				*/
-				
-				// PEGA URL DA PÁGINA NOVA CRIADA E TRANSFORMA NUM LINK
-				wait.until(ExpectedConditions.presenceOfElementLocated(
-						By.linkText("Retorno")));
-				new ClipBoard().copia(new LinkLabelDiferente().transforma(driver.getCurrentUrl()).replace("_blank", "_self"));
-				
-				// CLICA NO LINK RETORNO
-				driver.findElement(
-						By.linkText("Retorno")).click();
-				
-				// ACIONA BOTÃO PARA EDITAR PÁGINA ÍNDICE DO CURSO
-				wait.until(ExpectedConditions.presenceOfElementLocated(
-						By.linkText("Edit Page")));
-				driver.findElement(
-						By.linkText("Edit Page")).click();
-			
-				// ACIONA O BOTÃO PARA O EDITOR DE HTML
-				wait.until(ExpectedConditions.presenceOfElementLocated(
-						By.cssSelector("span.mce_code")));
-				driver.findElement(
-						By.cssSelector("span.mce_code")).click();
+			// CLICA NO LINK RETORNO
+			driver.findElement(By.linkText("Retorno")).click();
 
-				// ESPERA PELA INTERVENÇÃO DO USUÁRIO NA CRIAÇÃO DO LINK DA CHAMADA DA NOVA PÁGINA
-				wait.until(ExpectedConditions.presenceOfElementLocated(
-						By.className("LinkLabelDiferente")));
-				
-				
-			}
+			// ACIONA BOTÃO PARA EDITAR PÁGINA ÍNDICE DO CURSO
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Edit Page")));
+			driver.findElement(By.linkText("Edit Page")).click();
 
-			primeiraLinha = false;
+			// ACIONA O BOTÃO PARA O EDITOR DE HTML
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("span.mce_code")));
+			driver.findElement(By.cssSelector("span.mce_code")).click();
+
+			// ESPERA PELA INTERVENÇÃO DO USUÁRIO NA CRIAÇÃO DO LINK DA CHAMADA
+			// DA NOVA PÁGINA
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.className("LinkLabelDiferente")));
+
 		}
 	}
 }

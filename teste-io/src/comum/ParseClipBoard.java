@@ -2,6 +2,7 @@ package comum;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.List;
 
 import formata.FonteMaior;
 import formata.FundoCinza;
@@ -10,8 +11,8 @@ import formata.Negrito;
 import formata.ParaListaNumerada;
 import gera.automatico.PaginasAulaCurso;
 import gera.automatico.PastaDeCursos;
-import gera.manual.EstruturaExercicios;
-import gera.manual.EstruturaSubTitulosExplicacao;
+import gera.manual.GeraEstruturaExercicios;
+import gera.manual.GeraEstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
 import gera.manual.PaginaAulaCurso;
@@ -23,8 +24,8 @@ import transcreve.LinkLabelDiferente;
 import transcreve.LinkMesmoLabel;
 import transcreve.ListaNumerada;
 import transcreve.Paragrafo;
-import transcreve.SubTitulo;
 import transcreve.SubTituloDeExercicioOuResposta;
+import transcreve.TranscreveSubTitulo;
 
 public class ParseClipBoard {
 	public static void main(String[] args) throws UnsupportedFlavorException,
@@ -47,7 +48,8 @@ public class ParseClipBoard {
 			String[] vemEmLinhas = vem.split("\n");
 
 			// PARA MIGRAÇÃO XML
-			Curso curso;
+			Curso curso = ConverteXmlParaCurso.cursoDeXml(vem);
+			Licao licao;
 			
 			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
 			String vai = "";
@@ -63,7 +65,7 @@ public class ParseClipBoard {
 				vai = new ListaNumerada().transforma(vemEmLinhas);
 				break;
 			case "4":
-				vai = new SubTitulo().transforma(vem);
+				vai = new TranscreveSubTitulo().transforma(vem);
 				break;
 			case "5":
 				vai = new LinkLabelDiferente().transforma(vem);
@@ -93,7 +95,7 @@ public class ParseClipBoard {
 				vai = new  LinkMesmoLabel().transforma(vemEmLinhas); 
 				break;
 			case "14":
-				vai = new  EstruturaExercicios().transforma(vemEmLinhas); 
+				vai = new  GeraEstruturaExercicios().transforma(pegaLicao(opcoes, curso)); 
 				break;
 			case "15":
 				vai = new  IconeTecla().transforma(vem); 
@@ -102,21 +104,19 @@ public class ParseClipBoard {
 				vai = new  IconeDiploma().transforma(vem); 
 				break;
 			case "17":
-				vai = new  EstruturaSubTitulosExplicacao().transforma(vemEmLinhas); 
+				vai = new  GeraEstruturaSubTitulosExplicacao().transforma(pegaLicao(opcoes, curso)); 
 				break;
 			case "18":
-				curso = ConverteXmlParaCurso.cursoDeXml(vem);
 				vai = new  PaginaIndiceCurso().transforma(curso); 
 				break; 
 			case "19":
-				vai = new  PaginaAulaCurso().transforma(vem); 
+				vai = new  PaginaAulaCurso().transforma(curso, pegaLicao(opcoes, curso)); 
 				break;
 			case "20":
-				curso = ConverteXmlParaCurso.cursoDeXml(vem);
 				vai = new  PastaDeCursos().transforma(curso); 
 				break;
 			case "21":
-				new  PaginasAulaCurso().transforma(vem, opcoes); 
+				new  PaginasAulaCurso().transforma(curso); 
 				break;
 			case "22":
 				curso = new Curso("01", "Nome do Curso", "01/11/2014");
@@ -143,6 +143,14 @@ public class ParseClipBoard {
 		}
 
 		System.out.println("Bye!");
+	}
+
+	private static Licao pegaLicao(Opcoes opcoes, Curso curso) {
+		List<Licao> licoes;
+		Licao licao;
+		licoes = curso.getLicoes();
+		licao = licoes.get(opcoes.getNumeroLicao());
+		return licao;
 	}
 
 }

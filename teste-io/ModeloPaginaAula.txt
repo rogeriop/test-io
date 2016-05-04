@@ -23,8 +23,11 @@
 <td>
 <p>00 - V&Iacute;DEO AULA</p>
 <p><a href='#A01'><font size='3' color='#0000ff'><em>01 - EXPLICA&Ccedil;&Atilde;O</em></font></a></p>
+<!-- Links Sub_titulos Explicacoes -->
 <p><a href='#A02'><font size='3' color='#0000ff'><em>02 - EXERC&Iacute;CIOS</em></font></a></p>
+<!-- Links Exercicios -->
 <p><a href='#A03'><font size='3' color='#0000ff'><em>03 - RESPOSTAS DOS EXERC&Iacute;CIOS</em></font></a></p>
+<!-- Links Respostas Exercicios -->
 <p><a href='#A04'><font size='3' color='#0000ff'><em>04 - MINHAS ANOTA&Ccedil;&Otilde;ES</em></font></a></p>
 <p><a name='A01'></a></p>
 </td>
@@ -40,9 +43,11 @@
 </tr>
 <tr>
 <td align='right'>&nbsp;</td>
-<td><a name='B01'></a>
+<td>
+<!-- Sub-Titulos Explicacoes -->
 <p>*****************************************************************************************************</p>
-<a name='A02'></a></td>
+<a name='A02'></a>
+</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -57,10 +62,10 @@
 <td align='right'>&nbsp;</td>
 <td>
 <p><font size='3'>&nbsp;</font></p>
-<p>************</p>
-<p><font size='3'>&nbsp;</font></p>
+<!-- Titulos Exercicios -->
 <p>EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-<a name='A03'></a>&nbsp;</td>
+<a name='A03'></a>
+</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -75,8 +80,7 @@
 <td align='right'>&nbsp;</td>
 <td>
 <p><font size='3'>&nbsp;</font></p>
-<p>************</p>
-<p><font size='3'>&nbsp;</font></p>
+<!-- Titulos Respostas Exercicios -->
 <p>RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR</p>
 <p><span><a name='A04'></a></span></p>
 </td>

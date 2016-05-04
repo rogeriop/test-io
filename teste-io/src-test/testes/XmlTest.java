@@ -17,7 +17,7 @@ public class XmlTest {
 		List<Licao> licoes = new ArrayList<>();
 		String s = ">%2F01%2520CURSOS%2F2014-12-19%2520ALURA%2F59%2520Refatorando%2520na%2520pr%25E1tica&page=1<1";
 		s = s.replace("&", "&amp;");
-		Curso curso = new Curso("59", s, "01/11/2014");
+		Curso curso = new Curso("59", "Código de Talião", "01/11/2014");
 		curso.setUrlPastasDoCurso(">%2F01%2520CURSOS%2F2014-12-19%2520ALURA%2F59%2520Refatorando%2520na%2520pr%25E1tica&page=1<");
 		licoes.add(new Licao("01", ">%2F01%2520CURSOS%2F2014-12-19%2520ALURA%2F59%2520Refatorando%2520na%2520pr%25E1tica&page=1<"));
 		licoes.add(new Licao("02", "Nomes mais legíveis"));

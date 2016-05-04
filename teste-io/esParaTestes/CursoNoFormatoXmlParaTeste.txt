@@ -1,0 +1,126 @@
+<curso>
+  <codigo>01</codigo>
+  <nome>Nome do Curso</nome>
+  <urlIndiceDoCurso>/share/page/site/07-carreira-profissional/wiki-page?title=2015-12-20_Facebook%3B_Cria%C3%A7%C3%A3o_de_imagens_e_an%C3%BAncios&amp;listViewLinkBack=true</urlIndiceDoCurso>
+  <urlPastasDoCurso>http://</urlPastasDoCurso>
+  <urlCertificado>http://</urlCertificado>
+  <urlCurso>http://www.google.com.br</urlCurso>
+  <emailAluno>nome@provedor.com</emailAluno>
+  <senhaAluno>110</senhaAluno>
+  <nomeWorkspace>NomeWorkspace</nomeWorkspace>
+  <ipMaquina>10.0.0.122</ipMaquina>
+  <nomeProjeto>NomeProjeto</nomeProjeto>
+  <urlGitHub>http://github.com/</urlGitHub>
+  <pastaGitHubLocal>CaminhoLocalProjeto</pastaGitHubLocal>
+  <licoes>
+    <licao>
+      <codigo>01</codigo>
+      <nome>A</nome>
+      <subTitulosDaExplicacao>
+        <string>Downloads</string>
+        <string>Trabalhando com o banco de dados</string>
+        <string>O paradigma orientado a objetos</string>
+        <string>Evitando o SQL dentro do código Java</string>
+        <string>JDBC e SQL - problemas de manutenção</string>
+        <string>Persistir objetos sem escrever SQL</string>
+        <string>Unindo os dois mundos através do Mapeamento Objeto-Relacional</string>
+        <string>A Java Persistence API - JPA</string>
+        <string>O primeiro exemplo com JPA</string>
+        <string>Resumo</string>
+      </subTitulosDaExplicacao>
+      <titulosExercicios>
+        <string>Instalando o Maven</string>
+        <string>Trabalhando com um projeto Maven</string>
+        <string>Importando o projeto no Eclipse</string>
+        <string>Alternativas para gerenciar dependências</string>
+        <string>Outras ferramentas de gerenciamento de ciclo de build</string>
+      </titulosExercicios>
+      <videos>
+        <video>
+          <sequencia>01</sequencia>
+          <nome>A</nome>
+        </video>
+      </videos>
+    </licao>
+    <licao>
+      <codigo>02</codigo>
+      <nome>B</nome>
+      <subTitulosDaExplicacao>
+        <string>Sub-Titulo</string>
+      </subTitulosDaExplicacao>
+      <titulosExercicios>
+        <string>Ex1</string>
+      </titulosExercicios>
+      <videos>
+        <video>
+          <sequencia>01</sequencia>
+          <nome>A</nome>
+        </video>
+      </videos>
+    </licao>
+    <licao>
+      <codigo>03</codigo>
+      <nome>C</nome>
+      <subTitulosDaExplicacao>
+        <string>Sub-Titulo</string>
+      </subTitulosDaExplicacao>
+      <titulosExercicios>
+        <string>Ex1</string>
+      </titulosExercicios>
+      <videos>
+        <video>
+          <sequencia>01</sequencia>
+          <nome>A</nome>
+        </video>
+      </videos>
+    </licao>
+    <licao>
+      <codigo>04</codigo>
+      <nome>D</nome>
+      <subTitulosDaExplicacao>
+        <string>Sub-Titulo</string>
+      </subTitulosDaExplicacao>
+      <titulosExercicios>
+        <string>Ex1</string>
+      </titulosExercicios>
+      <videos>
+        <video>
+          <sequencia>01</sequencia>
+          <nome>A</nome>
+        </video>
+      </videos>
+    </licao>
+    <licao>
+      <codigo>05</codigo>
+      <nome>E</nome>
+      <subTitulosDaExplicacao>
+        <string>Sub-Titulo</string>
+      </subTitulosDaExplicacao>
+      <titulosExercicios>
+        <string>Ex1</string>
+      </titulosExercicios>
+      <videos>
+        <video>
+          <sequencia>01</sequencia>
+          <nome>A</nome>
+        </video>
+      </videos>
+    </licao>
+    <licao>
+      <codigo>06</codigo>
+      <nome>F</nome>
+      <subTitulosDaExplicacao>
+        <string>Sub-Titulo</string>
+      </subTitulosDaExplicacao>
+      <titulosExercicios>
+        <string>Ex1</string>
+      </titulosExercicios>
+      <videos>
+        <video>
+          <sequencia>01</sequencia>
+          <nome>A</nome>
+        </video>
+      </videos>
+    </licao>
+  </licoes>
+</curso>

@@ -8,7 +8,8 @@ public class Opcoes {
 	private int width = 0;
 	private int height = 0;
 	private int numeracao = 0;
-	
+	private int numeroLicao = 0;
+
 	public Opcoes() {
 		pegaOpcao();
 	}
@@ -19,23 +20,23 @@ public class Opcoes {
 		// PEGA OPÇÕES NA LINHA DE COMANDO
 		do {
 			
-			System.out.println("------------------------------------------------------------------------------------------------------");
-			System.out.println("| TRANSCREVE (para)               | FORMATA (para)      | GERA (um/uma/uns/umas)                     |");
-			System.out.println("------------------------------------------------------------------------------------------------------");
-			System.out.println("| (1)Codigo                       |(12)Fonte maior      |(14)Estrutura de exercícios                 |");
-			System.out.println("| (3)Lista Numerada               | (9)Fundo cinza      |(17)Estrutura de sub-titulos da explicacao  |");
-			System.out.println("| (5)Link (diferente label)       |(11)Italico vermelho |(16)Icone Diploma -> coluna                 |");
-			System.out.println("|(13)Link (mesmo label)           |(10)Lista numerada   |(15)Icone tecla -> coluna                   |");
-			System.out.println("| (7)Imagem -> linha              | (6)Negrito          |(19)Pagina aula do curso                    |");
-			System.out.println("| (2)Paragrafo                    |                     |(21)Paginas aulas do curso -> Ações Alfresco|");
-			System.out.println("| (4)SubTitulo Explicacao -> linha|                     |(18)Pagina indice do curso                  |");
-			System.out.println("| (8)SubTitulo Exercicios -> linha|                     |(20)Pastas de Aula  -> Ações Alfresco       |");
-			System.out.println("|                                 |                     |(22)XML padrão do Curso                     |");
-			System.out.println("|                                 |                     |                                            |");
-			System.out.println("|                                 |                     |                                            |");
-			System.out.println("|                                 |                     |                                            |");
-			System.out.println("|                                 |                     |                                            |");
-			System.out.println("------------------------------------------------------------------------------------------------------");
+			System.out.println("----------------------------------------------------------------------------------------------------------------");
+			System.out.println("| TRANSCREVE (para)                         | FORMATA (para)      | GERA (um/uma/uns/umas)                     |");
+			System.out.println("----------------------------------------------------------------------------------------------------------------");
+			System.out.println("| (1)Codigo                                 |(12)Fonte maior      |(14)Estrutura de exercícios                 |");
+			System.out.println("| (3)Lista Numerada                         | (9)Fundo cinza      |(17)Estrutura de sub-titulos da explicacao  |");
+			System.out.println("| (5)Link (diferente label)                 |(11)Italico vermelho |(16)Icone Diploma -> coluna                 |");
+			System.out.println("|(13)Link (mesmo label)                     |(10)Lista numerada   |(15)Icone tecla -> coluna                   |");
+			System.out.println("| (7)Imagem -> linha                        | (6)Negrito          |(19)Pagina aula do curso                    |");
+			System.out.println("| (2)Paragrafo                              |                     |(21)Paginas aulas do curso -> Ações Alfresco|");
+			System.out.println("| (4)SubTitulo Explicacao -> linha          |                     |(18)Pagina indice do curso                  |");
+			System.out.println("| (8)SubTitulo Exercicios/Respostas -> linha|                     |(20)Pastas de Aula  -> Ações Alfresco       |");
+			System.out.println("|                                           |                     |(22)XML padrão do Curso                     |");
+			System.out.println("|                                           |                     |                                            |");
+			System.out.println("|                                           |                     |                                            |");
+			System.out.println("|                                           |                     |                                            |");
+			System.out.println("|                                           |                     |                                            |");
+			System.out.println("----------------------------------------------------------------------------------------------------------------");
 			System.out.println("Para encerrar digite 99. Informe o tipo:");
 
 			a = console.nextLine();
@@ -51,6 +52,9 @@ public class Opcoes {
 			}
 			if (a.equals("7")) {
 				recebeTamanhoDaImagem();
+			}
+			if (a.equals("14") || a.equals("17") || a.equals("19")){
+				recebeNumeroLicao();
 			}
 			if (a.equals("21")){
 				recebeInicioNumeracao();
@@ -106,7 +110,12 @@ public class Opcoes {
 		Scanner consolex = new Scanner(System.in);
 		System.out.println("Informe numeracao inicial do aula");
 		numeracao = consolex.nextInt();
-		
+	}
+
+	public void recebeNumeroLicao() {
+		Scanner consolex = new Scanner(System.in);
+		System.out.println("Informe numero da licao");
+		numeroLicao = consolex.nextInt();
 	}
 
 	public int getNumeracao() {
@@ -123,6 +132,10 @@ public class Opcoes {
 
 	public int getHeight() {
 		return height;
+	}
+
+	public int getNumeroLicao() {
+		return numeroLicao;
 	}
 
 }

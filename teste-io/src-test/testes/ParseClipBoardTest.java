@@ -2,18 +2,20 @@ package testes;
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import comum.Curso;
+import comum.Licao;
 import formata.FonteMaior;
 import formata.FundoCinza;
 import formata.ItalicoVermelho;
 import formata.Negrito;
 import formata.ParaListaNumerada;
-import gera.manual.EstruturaExercicios;
-import gera.manual.EstruturaSubTitulosExplicacao;
+import gera.manual.GeraEstruturaExercicios;
+import gera.manual.GeraEstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
 import gera.manual.PaginaAulaCurso;
@@ -25,7 +27,7 @@ import transcreve.LinkLabelDiferente;
 import transcreve.LinkMesmoLabel;
 import transcreve.ListaNumerada;
 import transcreve.Paragrafo;
-import transcreve.SubTitulo;
+import transcreve.TranscreveSubTitulo;
 import transcreve.SubTituloDeExercicioOuResposta;
 
 
@@ -86,7 +88,8 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao13;
 
 	// Opção 14-Estrutura de exercicios
-	private static String[] TextoParaOTesteDaOpcao14;
+	private static Curso curso14;
+	private static Licao licao14;
 	private static String ResultadoEsperadoDaOpcao14;
 
 	// Opção 15-Icone Tela
@@ -98,7 +101,8 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao16;
 
 	// Opção 17-Estrutura de sub-titulos da explicacao
-	private static String[] TextoParaOTesteDaOpcao17;
+	private static Curso curso17;
+	private static Licao licao17;
 	private static String ResultadoEsperadoDaOpcao17;
 
 	// Opção 18-Página índice do curso
@@ -106,11 +110,11 @@ public class ParseClipBoardTest {
 	private static String ResultadoEsperadoDaOpcao18;
 
 	// Opção 19-Página aula do curso
-	private static String TextoParaOTesteDaOpcao19;
+	private static Curso curso19;
+	private static Licao licao19;
 	private static String ResultadoEsperadoDaOpcao19;
 
 	// Opção 22-XML do Curso
-
 	private static Curso curso22;
 	private static String ResultadoEsperadoDaOpcao22;
 
@@ -183,8 +187,10 @@ public class ParseClipBoardTest {
 		ResultadoEsperadoDaOpcao13 = opcao13.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 14
-		CenariosEResultadosEsperados opcao14 = new CenariosEResultadosEsperados("Opcao14TextoParaTeste.txt", "Opcao14ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao14 = opcao14.getCenarioEmLinhas();
+		CenariosEResultadosEsperados opcao14 = new CenariosEResultadosEsperados(true, "CursoNoFormatoXmlParaTeste.txt", "Opcao14ResultadoEsperado.txt");
+		curso14 = opcao14.getCurso();
+		List<Licao> licoes14 = curso14.getLicoes();
+		licao14 = licoes14.get(0);
 		ResultadoEsperadoDaOpcao14 = opcao14.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 15
@@ -198,8 +204,10 @@ public class ParseClipBoardTest {
 		ResultadoEsperadoDaOpcao16 = opcao16.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 17
-		CenariosEResultadosEsperados opcao17 = new CenariosEResultadosEsperados("Opcao17TextoParaTeste.txt", "Opcao17ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao17 = opcao17.getCenarioEmLinhas();
+		CenariosEResultadosEsperados opcao17 = new CenariosEResultadosEsperados(true, "CursoNoFormatoXmlParaTeste.txt", "Opcao17ResultadoEsperado.txt");
+		curso17 = opcao17.getCurso();
+		List<Licao> licoes17 = curso17.getLicoes();
+		licao17 = licoes17.get(0);
 		ResultadoEsperadoDaOpcao17 = opcao17.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 18
@@ -208,8 +216,10 @@ public class ParseClipBoardTest {
 		ResultadoEsperadoDaOpcao18 = opcao18.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 19
- 		CenariosEResultadosEsperados opcao19 = new CenariosEResultadosEsperados("Opcao19TextoParaTeste.txt", "Opcao19ResultadoEsperado.txt");
-		TextoParaOTesteDaOpcao19 = opcao19.getCenario();
+ 		CenariosEResultadosEsperados opcao19 = new CenariosEResultadosEsperados(true, "CursoNoFormatoXmlParaTeste.txt", "Opcao19ResultadoEsperado.txt");
+		curso19 = opcao19.getCurso();
+		List<Licao> licoes19 = curso19.getLicoes();
+		licao19 = licoes19.get(0);
 		ResultadoEsperadoDaOpcao19 = opcao19.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 22
@@ -221,183 +231,122 @@ public class ParseClipBoardTest {
 	
 	@Test
 	public void deveFormatarComoUmCodigo() {
-		
 		String ResultadoGerado = new Codigo().transforma(TextoParaOTesteDaOpcao1);
-		
 		assertEquals(ResultadoEsperadoDaOpcao1, ResultadoGerado);
-
 	}
 
 	@Test
 	public void deveFormatarComoUmParagrafo() {
-		
 		String ResultadoGerado = new Paragrafo().transforma(TextoParaOTesteDaOpcao2);
-		
 		assertEquals(ResultadoEsperadoDaOpcao2, ResultadoGerado);
-
 	}
 
 	@Test
 	public void deveFormatarComoUmaListaNumerada() {
-		
 		String ResultadoGerado = new ListaNumerada().transforma(TextoParaOTesteDaOpcao3);
-		
 		assertEquals(ResultadoEsperadoDaOpcao3, ResultadoGerado);
-
 	}
 
 	@Test
 	public void deveFormatarComoUmSubtitulo() {
-		
-		String ResultadoGerado = new SubTitulo().transforma(TextoParaOTesteDaOpcao4);
-		
+		String ResultadoGerado = new TranscreveSubTitulo().transforma(TextoParaOTesteDaOpcao4);
 		assertEquals(ResultadoEsperadoDaOpcao4, ResultadoGerado);
-
 	}
 
 	@Test
 	public void deveFormatarComoUmLinkDeLabelDiferente() {
-		
 		String ResultadoGerado = new LinkLabelDiferente().transforma(TextoParaOTesteDaOpcao5);
-		
 		assertEquals(ResultadoEsperadoDaOpcao5, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarComoUmNegrito() {
-		
 		String ResultadoGerado = new Negrito().transforma(TextoParaOTesteDaOpcao6);
-		
 		assertEquals(ResultadoEsperadoDaOpcao6, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarComoUmaImagem() {
-		
 		String ResultadoGerado = new Imagem().transforma(TextoParaOTesteDaOpcao7, 307, 72);
-		
 		assertEquals(ResultadoEsperadoDaOpcao7, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarComoUmSubTituloDeExercicioOuResposta() {
-		
 		String ResultadoGerado = new SubTituloDeExercicioOuResposta().transforma(TextoParaOTesteDaOpcao8);
-		
 		assertEquals(ResultadoEsperadoDaOpcao8, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarColocandoFundoCinza() {
-		
 		String ResultadoGerado = new FundoCinza().tranforma(TextoParaOTesteDaOpcao9);
-		
 		assertEquals(ResultadoEsperadoDaOpcao9, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarColocandoEmListaNumerada() {
-		
 		String ResultadoGerado = new ParaListaNumerada().transforma(TextoParaOTesteDaOpcao10);
-		
 		assertEquals(ResultadoEsperadoDaOpcao10, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarComoUmItalicoVermelho() {
-		
 		String ResultadoGerado = new ItalicoVermelho().transforma(TextoParaOTesteDaOpcao11);
-		
 		assertEquals(ResultadoEsperadoDaOpcao11, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarComUmaFonteMaior() {
-		
 		String ResultadoGerado = new FonteMaior().transforma(TextoParaOTesteDaOpcao12);
-		
 		assertEquals(ResultadoEsperadoDaOpcao12, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarComoUmLinkDeMesmoLabel() {
-		
 		String ResultadoGerado = new LinkMesmoLabel().transforma(TextoParaOTesteDaOpcao13);
-		
 		assertEquals(ResultadoEsperadoDaOpcao13, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarAEstruturaDeExercicios() {
-		
-		String ResultadoGerado = new EstruturaExercicios().transforma(TextoParaOTesteDaOpcao14);
-		
+		String ResultadoGerado = new GeraEstruturaExercicios().transforma(licao14);
 		assertEquals(ResultadoEsperadoDaOpcao14, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveGerarIconeTecla() {
-		
 		String ResultadoGerado = new IconeTecla().transforma(TextoParaOTesteDaOpcao15);
-		
 		assertEquals(ResultadoEsperadoDaOpcao15, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveGerarIconeDiploma() {
-		
 		String ResultadoGerado = new IconeDiploma().transforma(TextoParaOTesteDaOpcao16);
-		
 		assertEquals(ResultadoEsperadoDaOpcao16, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveFormatarAEstruturaDeSubTitulosExplicacao() {
-		
-		String ResultadoGerado = new EstruturaSubTitulosExplicacao().transforma(TextoParaOTesteDaOpcao17);
-		
+		String ResultadoGerado = new GeraEstruturaSubTitulosExplicacao().transforma(licao17);
 		assertEquals(ResultadoEsperadoDaOpcao17, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveGerarPaginaIndiceDoCurso() {
-		
 		String ResultadoGerado = new PaginaIndiceCurso().transforma(curso18);
-		
 		assertEquals(ResultadoEsperadoDaOpcao18, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveGerarPaginaAulaDoCurso() {
-		
-		String ResultadoGerado = new PaginaAulaCurso().transforma(TextoParaOTesteDaOpcao19);
-		
+		String ResultadoGerado = new PaginaAulaCurso().transforma(curso19, licao19);
 		assertEquals(ResultadoEsperadoDaOpcao19, ResultadoGerado);
-		
 	}
 
 	@Test
 	public void deveGerarXmlPadraoDoCurso() {
-		
 		String ResultadoGerado = new XmlPadraoDoCurso().transforma(curso22);
-		
 		assertEquals(ResultadoEsperadoDaOpcao22, ResultadoGerado);
-		
 	}
-	
 	
 }

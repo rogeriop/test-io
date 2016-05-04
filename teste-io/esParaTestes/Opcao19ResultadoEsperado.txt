@@ -23,8 +23,37 @@
 <td>
 <p>00 - V&Iacute;DEO AULA</p>
 <p><a href='#A01'><font size='3' color='#0000ff'><em>01 - EXPLICA&Ccedil;&Atilde;O</em></font></a></p>
+<!-- Links Explicacoes -->
+<ol>
+<li><a href='#B01'><font size='3' color='blue'><em>Downloads</em></font></a></li>
+<li><a href='#B02'><font size='3' color='blue'><em>Trabalhando com o banco de dados</em></font></a></li>
+<li><a href='#B03'><font size='3' color='blue'><em>O paradigma orientado a objetos</em></font></a></li>
+<li><a href='#B04'><font size='3' color='blue'><em>Evitando o SQL dentro do código Java</em></font></a></li>
+<li><a href='#B05'><font size='3' color='blue'><em>JDBC e SQL - problemas de manutenção</em></font></a></li>
+<li><a href='#B06'><font size='3' color='blue'><em>Persistir objetos sem escrever SQL</em></font></a></li>
+<li><a href='#B07'><font size='3' color='blue'><em>Unindo os dois mundos através do Mapeamento Objeto-Relacional</em></font></a></li>
+<li><a href='#B08'><font size='3' color='blue'><em>A Java Persistence API - JPA</em></font></a></li>
+<li><a href='#B09'><font size='3' color='blue'><em>O primeiro exemplo com JPA</em></font></a></li>
+<li><a href='#B10'><font size='3' color='blue'><em>Resumo</em></font></a></li>
+</ol>
 <p><a href='#A02'><font size='3' color='#0000ff'><em>02 - EXERC&Iacute;CIOS</em></font></a></p>
+<!-- Links Exercicios -->
+<ol>
+<li><a href='#E01'><font size='3' color='blue'><em>Instalando o Maven</em></font></a></li>
+<li><a href='#E02'><font size='3' color='blue'><em>Trabalhando com um projeto Maven</em></font></a></li>
+<li><a href='#E03'><font size='3' color='blue'><em>Importando o projeto no Eclipse</em></font></a></li>
+<li><a href='#E04'><font size='3' color='blue'><em>Alternativas para gerenciar dependências</em></font></a></li>
+<li><a href='#E05'><font size='3' color='blue'><em>Outras ferramentas de gerenciamento de ciclo de build</em></font></a></li>
+</ol>
 <p><a href='#A03'><font size='3' color='#0000ff'><em>03 - RESPOSTAS DOS EXERC&Iacute;CIOS</em></font></a></p>
+<!-- Links Respostas Exercicios -->
+<ol>
+<li><a href='#R01'><font size='3' color='blue'><em>Instalando o Maven</em></font></a></li>
+<li><a href='#R02'><font size='3' color='blue'><em>Trabalhando com um projeto Maven</em></font></a></li>
+<li><a href='#R03'><font size='3' color='blue'><em>Importando o projeto no Eclipse</em></font></a></li>
+<li><a href='#R04'><font size='3' color='blue'><em>Alternativas para gerenciar dependências</em></font></a></li>
+<li><a href='#R05'><font size='3' color='blue'><em>Outras ferramentas de gerenciamento de ciclo de build</em></font></a></li>
+</ol>
 <p><a href='#A04'><font size='3' color='#0000ff'><em>04 - MINHAS ANOTA&Ccedil;&Otilde;ES</em></font></a></p>
 <p><a name='A01'></a></p>
 </td>
@@ -40,9 +69,60 @@
 </tr>
 <tr>
 <td align='right'>&nbsp;</td>
-<td><a name='B01'></a>
+<td>
+<a name='B01'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Downloads</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B02'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Trabalhando com o banco de dados</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B03'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>O paradigma orientado a objetos</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B04'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Evitando o SQL dentro do código Java</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B05'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>JDBC e SQL - problemas de manutenção</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B06'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Persistir objetos sem escrever SQL</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B07'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Unindo os dois mundos através do Mapeamento Objeto-Relacional</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B08'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>A Java Persistence API - JPA</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B09'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>O primeiro exemplo com JPA</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='B10'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5'><strong>Resumo</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
 <p>*****************************************************************************************************</p>
-<a name='A02'></a></td>
+<a name='A02'></a>
+</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -57,10 +137,35 @@
 <td align='right'>&nbsp;</td>
 <td>
 <p><font size='3'>&nbsp;</font></p>
-<p>************</p>
+<!-- Titulos Exercicios -->
+<a name='E01'></a>
 <p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>EX1 - Instalando o Maven</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='E02'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>EX2 - Trabalhando com um projeto Maven</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='E03'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>EX3 - Importando o projeto no Eclipse</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='E04'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>EX4 - Alternativas para gerenciar dependências</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='E05'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>EX5 - Outras ferramentas de gerenciamento de ciclo de build</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
 <p>EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-<a name='A03'></a>&nbsp;</td>
+<a name='A03'></a>
+</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
@@ -75,8 +180,32 @@
 <td align='right'>&nbsp;</td>
 <td>
 <p><font size='3'>&nbsp;</font></p>
-<p>************</p>
+<!-- Titulos Respostas Exercicios -->
+<a name='R01'></a>
 <p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>R.EX1 - Instalando o Maven</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='R02'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>R.EX2 - Trabalhando com um projeto Maven</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='R03'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>R.EX3 - Importando o projeto no Eclipse</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='R04'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>R.EX4 - Alternativas para gerenciar dependências</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
+<a name='R05'></a>
+<p><font size='3'>&nbsp;</font></p>
+<p><font size='5' color='gray'><strong>R.EX5 - Outras ferramentas de gerenciamento de ciclo de build</strong></font></p>
+<p><font size='3'>&nbsp;</font></p>
+<p>***********************************</p>
 <p>RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR</p>
 <p><span><a name='A04'></a></span></p>
 </td>

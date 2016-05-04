@@ -1,5 +1,0 @@
-Instalando o Maven
-Trabalhando com um projeto Maven
-Importando o projeto no Eclipse
-Alternativas para gerenciar dependências
-Outras ferramentas de gerenciamento de ciclo de build
