@@ -56,9 +56,9 @@ public class Opcoes {
 			if (a.equals("14") || a.equals("17") || a.equals("19")){
 				recebeNumeroLicao();
 			}
-			if (a.equals("21")){
-				recebeInicioNumeracao();
-			}
+//			if (a.equals("21")){
+//				recebeInicioNumeracao();
+//			}
 		} while (!(a.equals("1"))    && !(a.equals("2"))  && !(a.equals("3"))
 				&& !(a.equals("4"))  && !(a.equals("5"))  && !(a.equals("6"))
 				&& !(a.equals("7"))  && !(a.equals("8"))  && !(a.equals("9"))

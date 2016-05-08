@@ -1,31 +1,30 @@
 package comum;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
 	
-	String codigo;
-	String nome;
-	String dataInicio;
-	String dataFim;
-	String urlIndiceDoCurso;
-	String urlPastasDoCurso;
-	String urlCertificado;
+	private String codigo;
+	private String nome;
+	private String dataInicio;
+	private String dataFim;
+	private String urlIndiceDoCurso;
+	private String urlPastasDoCurso;
+	private String urlCertificado;
 	
 	// LINHA 01 PÁGINA ÍNDICE (RECURSOS)
-	String urlCurso;
-	String emailAluno;
-	String senhaAluno;
+	private String urlCurso;
+	private String emailAluno;
+	private String senhaAluno;
 	// LINHA 02 PÁGINA ÍNDICE (RECURSOS)
-	String nomeWorkspace;
-	String ipMaquina;
+	private String nomeWorkspace;
+	private String ipMaquina;
 	// LINHA 03 PÁGINA ÍNDICE (RECURSOS)
-	String nomeProjeto;
+	private String nomeProjeto;
 	// LINHA 04 PÁGINA ÍNDICE (RECURSOS)
-	String urlGitHub;
-	String pastaGitHubLocal;
+	private String urlGitHub;
+	private String pastaGitHubLocal;
 	
 	List<Licao> licoes = new ArrayList<>();
 
@@ -50,7 +49,6 @@ public class Curso {
 	public void setUrlPastasDoCurso(String urlPastasDoCurso) {
 		this.urlPastasDoCurso = urlPastasDoCurso;
 	}
-
 
 	public String getUrlGitHub() {
 		return urlGitHub;

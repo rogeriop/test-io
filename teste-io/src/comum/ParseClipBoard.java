@@ -48,7 +48,9 @@ public class ParseClipBoard {
 			String[] vemEmLinhas = vem.split("\n");
 
 			// PARA MIGRAÇÃO XML
-			Curso curso = ConverteXmlParaCurso.cursoDeXml(vem);
+			Curso curso = new Curso("01", "Nome do Curso", "01/11/2014");
+			if (opcoes.getA() == "17" || opcoes.getA() == "18" || opcoes.getA() == "19" || opcoes.getA() == "20" || opcoes.getA() == "21")
+				curso = ConverteXmlParaCurso.cursoDeXml(vem);
 			Licao licao;
 			
 			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
@@ -119,7 +121,6 @@ public class ParseClipBoard {
 				new  PaginasAulaCurso().transforma(curso); 
 				break;
 			case "22":
-				curso = new Curso("01", "Nome do Curso", "01/11/2014");
 				vai = new  XmlPadraoDoCurso().transforma(curso); 
 				break;
 			}

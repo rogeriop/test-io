@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Licao {
 
-	String codigo;
-	String nome;
-	List<String> subTitulosDaExplicacao = new ArrayList<>();
-	List<String> titulosExercicios = new ArrayList<>();
-	List<Video> videos = new ArrayList<>();
+	private String codigo;
+	private String nome;
+	private List<String> subTitulosDaExplicacao = new ArrayList<>();
+	private List<String> titulosExercicios = new ArrayList<>();
+	private List<Video> videos = new ArrayList<>();
 	
 	public Licao(String codigo, String nome) {
 		this.codigo = codigo;
