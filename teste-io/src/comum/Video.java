@@ -2,9 +2,9 @@ package comum;
 
 public class Video {
 
-	String sequencia;
-	String nome;
-	String url;
+	private String sequencia;
+	private String nome;
+	private String url;
 	
 	public Video(String sequencia, String nome) {
 		this.sequencia = sequencia;
@@ -35,7 +35,10 @@ public class Video {
 		this.url = url;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return this.nome + " " + this.url;
+	}
 	
 	
 }

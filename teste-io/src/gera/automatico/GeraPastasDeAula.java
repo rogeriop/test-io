@@ -12,7 +12,7 @@ import comum.Curso;
 import comum.Licao;
 import comum.UsaCurso;
 
-public class PastaDeCursos implements UsaCurso {
+public class GeraPastasDeAula implements UsaCurso {
 
 	public String transforma(Curso curso) {
 

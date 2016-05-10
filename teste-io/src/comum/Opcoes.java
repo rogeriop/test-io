@@ -33,8 +33,10 @@ public class Opcoes {
 			System.out.println("| (8)SubTitulo Exercicios/Respostas -> linha|                     |(20)Pastas de Aula  -> Ações Alfresco       |");
 			System.out.println("|                                           |                     |(22)XML padrão do Curso                     |");
 			System.out.println("|                                           |                     |                                            |");
-			System.out.println("|                                           |                     |                                            |");
-			System.out.println("|                                           |                     |                                            |");
+			System.out.println("---------------------------------------------                     |                                            |");
+			System.out.println("| ATUALIZA                                  |                     |                                            |");
+			System.out.println("---------------------------------------------                     |                                            |");
+			System.out.println("|(23)URLs de Videos da Licao                |                     |                                            |");
 			System.out.println("|                                           |                     |                                            |");
 			System.out.println("----------------------------------------------------------------------------------------------------------------");
 			System.out.println("Para encerrar digite 99. Informe o tipo:");
@@ -47,7 +49,7 @@ public class Opcoes {
 					&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
 					&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("18"))
 					&& !(a.equals("19")) && !(a.equals("20")) && !(a.equals("21"))
-					&& !(a.equals("22")) && !(a.equals("99"))) {
+					&& !(a.equals("22")) && !(a.equals("23")) && !(a.equals("99"))) {
 				System.out.println("Nada Feito");
 			}
 			if (a.equals("7")) {
@@ -66,7 +68,7 @@ public class Opcoes {
 				&& !(a.equals("13")) && !(a.equals("14")) && !(a.equals("15"))
 				&& !(a.equals("16")) && !(a.equals("17")) && !(a.equals("18"))
 				&& !(a.equals("19")) && !(a.equals("20")) && !(a.equals("21"))
-				&& !(a.equals("22")) && !(a.equals("99")));
+				&& !(a.equals("22")) && !(a.equals("23")) && !(a.equals("99")));
 		
 //		console.close();
 

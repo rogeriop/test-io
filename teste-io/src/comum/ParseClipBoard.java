@@ -1,16 +1,18 @@
 package comum;
+
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
+import atualiza.AtualizaVideosDaLicao;
 import formata.FonteMaior;
 import formata.FundoCinza;
 import formata.ItalicoVermelho;
 import formata.Negrito;
 import formata.ParaListaNumerada;
-import gera.automatico.PaginasAulaCurso;
-import gera.automatico.PastaDeCursos;
+import gera.automatico.GeraPaginasDeAulaCurso;
+import gera.automatico.GeraPastasDeAula;
 import gera.manual.GeraEstruturaExercicios;
 import gera.manual.GeraEstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
@@ -28,34 +30,35 @@ import transcreve.SubTituloDeExercicioOuResposta;
 import transcreve.TranscreveSubTitulo;
 
 public class ParseClipBoard {
-	public static void main(String[] args) throws UnsupportedFlavorException,
-			IOException {
-		
+	public static void main(String[] args) throws UnsupportedFlavorException, IOException {
+
 		Calendar dateTime;
 		ClipBoard clipBoard = new ClipBoard();
 
 		// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
 		Opcoes opcoes = new Opcoes();
-		
+
 		// EXECUTA A OPÇÃO DESEJADA E SOLICITA MAIS DEMANDA
 		while (!opcoes.getA().equals("99")) {
 
 			// RECEBE CONTEÚDO DO CLIPBOARD
 			String vem = clipBoard.obtem();
-			if (vem == null) vem = "Bem vindo ao ParseClipBoard";
-			
+			if (vem == null)
+				vem = "Bem vindo ao ParseClipBoard";
+
 			// CRIA ARRAY DE LINHAS
 			String[] vemEmLinhas = vem.split("\n");
 
 			// PARA MIGRAÇÃO XML
 			Curso curso = new Curso("01", "Nome do Curso", "01/11/2014");
-			if (opcoes.getA() == "17" || opcoes.getA() == "18" || opcoes.getA() == "19" || opcoes.getA() == "20" || opcoes.getA() == "21")
+			if (opcoes.getA().equals("17") || opcoes.getA().equals("18") || opcoes.getA().equals("19")
+					|| opcoes.getA().equals("20") || opcoes.getA().equals("21") || opcoes.getA().equals("23")) {
 				curso = ConverteXmlParaCurso.cursoDeXml(vem);
-			Licao licao;
-			
-			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD 
+			}
+
+			// INICIO DE PREPARAÇÃO DA VARIÁVEL DE SAÍDA PARA O CLIPBOARD
 			String vai = "";
-			
+
 			switch (opcoes.getA()) {
 			case "1":
 				vai = new Codigo().transforma(vemEmLinhas);
@@ -79,68 +82,71 @@ public class ParseClipBoard {
 				vai = new Imagem().transforma(vemEmLinhas, opcoes.getWidth(), opcoes.getHeight());
 				break;
 			case "8":
-				vai = new  SubTituloDeExercicioOuResposta().transforma(vem);
+				vai = new SubTituloDeExercicioOuResposta().transforma(vem);
 				break;
 			case "9":
-				vai = new  FundoCinza().tranforma(vem); 
+				vai = new FundoCinza().tranforma(vem);
 				break;
 			case "10":
-				vai = new  ParaListaNumerada().transforma(vemEmLinhas); 
+				vai = new ParaListaNumerada().transforma(vemEmLinhas);
 				break;
 			case "11":
-				vai = new  ItalicoVermelho().transforma(vemEmLinhas); 
+				vai = new ItalicoVermelho().transforma(vemEmLinhas);
 				break;
 			case "12":
-				vai = new  FonteMaior().transforma(vemEmLinhas); 
+				vai = new FonteMaior().transforma(vemEmLinhas);
 				break;
 			case "13":
-				vai = new  LinkMesmoLabel().transforma(vemEmLinhas); 
+				vai = new LinkMesmoLabel().transforma(vemEmLinhas);
 				break;
 			case "14":
-				vai = new  GeraEstruturaExercicios().transforma(pegaLicao(opcoes, curso)); 
+				vai = new GeraEstruturaExercicios().transforma(pegaLicao(opcoes, curso));
 				break;
 			case "15":
-				vai = new  IconeTecla().transforma(vem); 
+				vai = new IconeTecla().transforma(vem);
 				break;
 			case "16":
-				vai = new  IconeDiploma().transforma(vem); 
+				vai = new IconeDiploma().transforma(vem);
 				break;
 			case "17":
-				vai = new  GeraEstruturaSubTitulosExplicacao().transforma(pegaLicao(opcoes, curso)); 
+				vai = new GeraEstruturaSubTitulosExplicacao().transforma(pegaLicao(opcoes, curso));
 				break;
 			case "18":
-				vai = new  PaginaIndiceCurso().transforma(curso); 
-				break; 
+				vai = new PaginaIndiceCurso().transforma(curso);
+				break;
 			case "19":
-				vai = new  PaginaAulaCurso().transforma(curso, pegaLicao(opcoes, curso)); 
+				vai = new PaginaAulaCurso().transforma(curso, pegaLicao(opcoes, curso));
 				break;
 			case "20":
-				vai = new  PastaDeCursos().transforma(curso); 
+				vai = new GeraPastasDeAula().transforma(curso);
 				break;
 			case "21":
-				new  PaginasAulaCurso().transforma(curso); 
+				new GeraPaginasDeAulaCurso().transforma(curso);
 				break;
 			case "22":
-				vai = new  XmlPadraoDoCurso().transforma(curso); 
+				vai = new XmlPadraoDoCurso().transforma(curso);
+				break;
+			case "23":
+				vai = new AtualizaVideosDaLicao().transforma(curso);
 				break;
 			}
-			
+
 			// GRAVA TRATAMENTO DO TEXTO NO CLIBOARD
 			clipBoard.copia(vai);
 
 			// INFORMA HORA DE CONCLUSÃO DA OPÇÃO SOLICITADA
 			dateTime = Calendar.getInstance();
-			System.out.print("Feito as " );
+			System.out.print("Feito as ");
 			System.out.printf("%1$tH:%1$tM:%1$tS\n", dateTime);
 			System.out.println("------------------");
-			for(int x = 0; (x <= vemEmLinhas.length - 1) && (x < 3); x++) {
+			for (int x = 0; (x <= vemEmLinhas.length - 1) && (x < 3); x++) {
 				System.out.println(vemEmLinhas[x]);
 			}
 			System.out.println("------------------");
-			
+
 			// PEGA PRÓXIMA OPÇÃO NA LINHA DE COMANDO
 			opcoes.pegaOpcao();
-			
+
 		}
 
 		System.out.println("Bye!");

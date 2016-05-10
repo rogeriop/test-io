@@ -17,7 +17,7 @@ import comum.Opcoes;
 import gera.manual.PaginaAulaCurso;
 import transcreve.LinkLabelDiferente;
 
-public class PaginasAulaCurso {
+public class GeraPaginasDeAulaCurso {
 	public void transforma(Curso curso) throws UnsupportedFlavorException, IOException {
 
 		WebDriver driver = new FirefoxDriver();

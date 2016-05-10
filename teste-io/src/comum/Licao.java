@@ -55,4 +55,9 @@ public class Licao {
 	public void setSubTitulosDaExplicacao(List<String> subTitulosDaExplicacao) {
 		this.subTitulosDaExplicacao = subTitulosDaExplicacao;
 	}
+	
+	@Override
+	public String toString() {
+		return this.getCodigo() + " " + this.getNome();
+	}
 }
