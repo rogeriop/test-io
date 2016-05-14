@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import atualiza.AtualizaVideosDaLicao;
+import atualiza.AtualizaVideosDaLicaoNasPastasAlfresco;
 import formata.FonteMaior;
 import formata.FundoCinza;
 import formata.ItalicoVermelho;
@@ -52,7 +53,7 @@ public class ParseClipBoard {
 			// PARA MIGRAÇÃO XML
 			Curso curso = new Curso("01", "Nome do Curso", "01/11/2014");
 			if (opcoes.getA().equals("17") || opcoes.getA().equals("18") || opcoes.getA().equals("19")
-					|| opcoes.getA().equals("20") || opcoes.getA().equals("21") || opcoes.getA().equals("23")) {
+					|| opcoes.getA().equals("20") || opcoes.getA().equals("21") || opcoes.getA().equals("23") || opcoes.getA().equals("24")) {
 				curso = ConverteXmlParaCurso.cursoDeXml(vem);
 			}
 
@@ -128,6 +129,9 @@ public class ParseClipBoard {
 				break;
 			case "23":
 				vai = new AtualizaVideosDaLicao().transforma(curso);
+				break;
+			case "24":
+				vai = new AtualizaVideosDaLicaoNasPastasAlfresco().transforma(curso);
 				break;
 			}
 
