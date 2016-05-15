@@ -2,7 +2,7 @@ package comum;
 
 import java.util.List;
 
-public class Exercicios {
+public class PaginaDaLicaoExercicios {
 	List<String> titulos;
 	String listaOlDeTitulosExercicios = "";
 	String listaOlDeTitulosRespostasExercicios = "";
@@ -10,7 +10,7 @@ public class Exercicios {
 	String titulosRespostasExercicios = "";
 	String estruturaDeExerciciosCompleta = "";
 
-	public Exercicios(Licao licao) {
+	public PaginaDaLicaoExercicios(Licao licao) {
 		this.titulos = licao.getTitulosExercicios();
 		carregaDemaisVariaveisDeInstancia();
 	}

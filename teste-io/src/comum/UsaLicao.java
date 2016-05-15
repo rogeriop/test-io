@@ -1,6 +1,4 @@
-package gera.manual;
-
-import comum.Licao;
+package comum;
 
 public interface UsaLicao {
 	String transforma(Licao licao);

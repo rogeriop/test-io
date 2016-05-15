@@ -14,6 +14,7 @@ import formata.FundoCinza;
 import formata.ItalicoVermelho;
 import formata.Negrito;
 import formata.ParaListaNumerada;
+import gera.manual.GeraEstruturaDeVideos;
 import gera.manual.GeraEstruturaExercicios;
 import gera.manual.GeraEstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
@@ -27,8 +28,8 @@ import transcreve.LinkLabelDiferente;
 import transcreve.LinkMesmoLabel;
 import transcreve.ListaNumerada;
 import transcreve.Paragrafo;
-import transcreve.TranscreveSubTitulo;
 import transcreve.SubTituloDeExercicioOuResposta;
+import transcreve.TranscreveSubTitulo;
 
 
 public class ParseClipBoardTest {
@@ -117,6 +118,11 @@ public class ParseClipBoardTest {
 	// Opção 22-XML do Curso
 	private static Curso curso22;
 	private static String ResultadoEsperadoDaOpcao22;
+
+	// Sem Opção 100-Links do Vídeo de Pagina de Lição
+	private static Curso curso100;
+	private static Licao licao100;
+	private static String ResultadoEsperadoSemOpcao100;
 
 	@BeforeClass
 	public static void buscaCenariosEResultados() throws IOException {
@@ -226,6 +232,13 @@ public class ParseClipBoardTest {
 		CenariosEResultadosEsperados opcao22 = new CenariosEResultadosEsperados(null, "Opcao22ResultadoEsperado.txt");
 		curso22 = new Curso("01", "Nome do Curso", "01/11/2014");
 		ResultadoEsperadoDaOpcao22 = opcao22.getResultado();
+
+		// Cenário e Resultado Esperado da Opção 100
+ 		CenariosEResultadosEsperados opcao100 = new CenariosEResultadosEsperados(true, "CursoNoFormatoXmlParaTeste.txt", "SemOpcao100ResultadoEsperado.txt");
+		curso100 = opcao100.getCurso();
+		List<Licao> licoes100 = curso100.getLicoes();
+		licao100 = licoes100.get(0);
+		ResultadoEsperadoSemOpcao100 = opcao100.getResultado();
 
 	}
 	
@@ -347,6 +360,12 @@ public class ParseClipBoardTest {
 	public void deveGerarXmlPadraoDoCurso() {
 		String ResultadoGerado = new XmlPadraoDoCurso().transforma(curso22);
 		assertEquals(ResultadoEsperadoDaOpcao22, ResultadoGerado);
+	}
+
+	@Test
+	public void deveGerarLinksDeVideosNaPaginaAulaDoCurso() {
+		String ResultadoGerado = new GeraEstruturaDeVideos().transforma(licao100);
+		assertEquals(ResultadoEsperadoSemOpcao100, ResultadoGerado);
 	}
 	
 }

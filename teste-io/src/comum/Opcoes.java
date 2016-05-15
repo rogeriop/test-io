@@ -120,7 +120,7 @@ public class Opcoes {
 	public void recebeNumeroLicao() {
 		Scanner consolex = new Scanner(System.in);
 		System.out.println("Informe numero da licao");
-		numeroLicao = consolex.nextInt();
+		numeroLicao = consolex.nextInt() - 1;
 	}
 
 	public int getNumeracao() {

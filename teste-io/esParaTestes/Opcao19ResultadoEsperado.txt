@@ -21,7 +21,11 @@
 <tr>
 <td align='right' width='15%'>&nbsp;</td>
 <td>
-<p>00 - V&Iacute;DEO AULA</p>
+<p><font size='3'><em>00 - V&Iacute;DEO AULA</em></font></p>
+<ol>
+<li><a href='http://videoA' target='_blank'><font size='3' color='blue'><em>VideoA</em></font></a></li>
+<li><a href='http://videoB' target='_blank'><font size='3' color='blue'><em>VideoB</em></font></a></li>
+</ol>
 <p><a href='#A01'><font size='3' color='#0000ff'><em>01 - EXPLICA&Ccedil;&Atilde;O</em></font></a></p>
 <!-- Links Explicacoes -->
 <ol>

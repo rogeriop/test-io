@@ -1,10 +1,10 @@
 package transcreve;
 
-import comum.Exercicios;
+import comum.PaginaDaLicaoExercicios;
 
 public class SubTituloDeExercicioOuResposta {
 
 	public String transforma(String linha) {
-		return Exercicios.geraSubTituloDeExercicioOuResposta(linha);
+		return PaginaDaLicaoExercicios.geraSubTituloDeExercicioOuResposta(linha);
 	}
 }

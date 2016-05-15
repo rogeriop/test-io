@@ -2,20 +2,20 @@ package comum;
 
 import java.util.List;
 
-public class SubTitulosExplicacoes {
+public class PaginaDaLicaoSubTitulosExplicacoes {
 	private List<String> subTitulos;
 	private String listaOlDeSubTitulosExplicacoes;
 	private String subTitulosExplicacoes = "";
 	private String umSubTituloExplicacao;
 	private String umLiDeSubTituloExplicacao;
 	
-	public SubTitulosExplicacoes(Licao licao) {
+	public PaginaDaLicaoSubTitulosExplicacoes(Licao licao) {
 		this.subTitulos = licao.getSubTitulosDaExplicacao();
 		geraListaOlDeSubTitulosExplicacoes();
 		geraSubTitulosExplicacoes();
 	}
 
-	public SubTitulosExplicacoes(String umLiDeSubTituloExplicacao) {
+	public PaginaDaLicaoSubTitulosExplicacoes(String umLiDeSubTituloExplicacao) {
 		this.umLiDeSubTituloExplicacao = umLiDeSubTituloExplicacao;
 		geraUmSubTituloExplicacao();
 	}
@@ -69,5 +69,4 @@ public class SubTitulosExplicacoes {
 		umSubTituloExplicacao += umLiDeSubTituloExplicacao + "\n";
 		umSubTituloExplicacao += "<p><font size='3'>&nbsp;</font></p>\n";
 	}
-	
 }

@@ -38,7 +38,13 @@
       <videos>
         <video>
           <sequencia>01</sequencia>
-          <nome>A</nome>
+          <nome>VideoA</nome>
+          <url>http://videoA</url>
+        </video>
+        <video>
+          <sequencia>02</sequencia>
+          <nome>VideoB</nome>
+          <url>http://videoB</url>
         </video>
       </videos>
     </licao>
