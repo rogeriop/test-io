@@ -19,10 +19,9 @@ import comum.Curso;
 import comum.Licao;
 import comum.Video;
 
-public class AtualizaVideosDaLicao {
+public class AtualizaUrlsDeVideosDaLicaoNoXmlDoCurso {
 
 	public String transforma(Curso curso) throws UnsupportedFlavorException, IOException {
-
 		WebDriver driver = new FirefoxDriver();
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 
@@ -36,10 +35,6 @@ public class AtualizaVideosDaLicao {
 			String nomeDaLicao = licao.getNome();
 			String numeroDaLicao = licao.getCodigo();
 			List<Video> videos = licao.getVideos();
-
-			// TIRA CARACTER NÃO SUPORTADOS
-			nomeDaLicao.replace("?", "");
-			nomeDaLicao.replace(":", ";");
 
 			wait.until(ExpectedConditions.presenceOfElementLocated(
 					By.linkText(numeroDaLicao + " " + nomeDaLicao)));

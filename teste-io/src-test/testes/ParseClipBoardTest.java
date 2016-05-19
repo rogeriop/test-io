@@ -230,7 +230,7 @@ public class ParseClipBoardTest {
 
 		// Cenário e Resultado Esperado da Opção 22
 		CenariosEResultadosEsperados opcao22 = new CenariosEResultadosEsperados(null, "Opcao22ResultadoEsperado.txt");
-		curso22 = new Curso("01", "Nome do Curso", "01/11/2014");
+		curso22 = new Curso("01", "Nome do Curso", "01/01/2016");
 		ResultadoEsperadoDaOpcao22 = opcao22.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 100

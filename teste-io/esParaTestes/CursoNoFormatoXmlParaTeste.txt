@@ -1,6 +1,7 @@
 <curso>
   <codigo>01</codigo>
   <nome>Nome do Curso</nome>
+  <dataInicio>01/01/2016</dataInicio>
   <urlIndiceDoCurso>/share/page/site/07-carreira-profissional/wiki-page?title=2015-12-20_Facebook%3B_Cria%C3%A7%C3%A3o_de_imagens_e_an%C3%BAncios&amp;listViewLinkBack=true</urlIndiceDoCurso>
   <urlPastasDoCurso>http://</urlPastasDoCurso>
   <urlCertificado>http://</urlCertificado>
@@ -12,6 +13,7 @@
   <nomeProjeto>NomeProjeto</nomeProjeto>
   <urlGitHub>http://github.com/</urlGitHub>
   <pastaGitHubLocal>CaminhoLocalProjeto</pastaGitHubLocal>
+  <diretorioVideos>c:\\Users\\NomeUsuario\\Downloads\\ALURA\\</diretorioVideos>
   <licoes>
     <licao>
       <codigo>01</codigo>

@@ -14,7 +14,7 @@ public class XmlPadraoDoCurso implements UsaCurso {
 	@Override
 	public String transforma(Curso curso) {
 
-		curso.setDataFim("30/11/2014");
+		curso.setDataFim("01/01/2016");
 		
 		curso.setUrlIndiceDoCurso("http://");
 		curso.setUrlPastasDoCurso("http://");
@@ -33,8 +33,9 @@ public class XmlPadraoDoCurso implements UsaCurso {
 		curso.setNomeProjeto("NomeProjeto");
 		
 		// LINHA 04 PÁGINA ÍNDICE (RECURSOS)
-		curso.setUrlGitHub("http://");
-		curso.setPastaGitHubLocal("CaminhoLocalProjeto");;
+		curso.setUrlGitHub("http://github.com/");
+		curso.setPastaGitHubLocal("CaminhoLocalProjeto");
+		curso.setDiretorioVideos("c:\\Users\\NomeUsuario\\Downloads\\ALURA");
 		
 		List<Licao> licoes = new ArrayList<>();
 

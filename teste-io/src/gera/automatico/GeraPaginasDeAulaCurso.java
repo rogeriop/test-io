@@ -19,25 +19,17 @@ import transcreve.LinkLabelDiferente;
 
 public class GeraPaginasDeAulaCurso {
 	public void transforma(Curso curso) throws UnsupportedFlavorException, IOException {
-
 		WebDriver driver = new FirefoxDriver();
 		WebDriverWait wait = new WebDriverWait(driver, 90);
-
 		List<Licao> licoes = curso.getLicoes();
 
-		// URL DA PÁGINA DE ÍNDICE DO CURSO
 		String urlPaginaIndiceDoCurso = curso.getUrlIndiceDoCurso();
 		driver.get(urlPaginaIndiceDoCurso);
 		driver.manage().window().maximize();
 
 		for (Licao licao : licoes) {
-
-			String s = licao.getNome();
-			String codigo = licao.getCodigo();
-
-			// RETIRA CARCTERES NÃO SUPORTADOS
-			s.replace("?", "");
-			s.replace(":", ";");
+			String numeroDaLicao = licao.getCodigo();
+			String nomeDaLicao = licao.getNome();
 
 			// ACIONA BOTÃO PARA CRIAR NOVA PÁGINA
 			wait.until(ExpectedConditions.presenceOfElementLocated(
@@ -48,16 +40,20 @@ public class GeraPaginasDeAulaCurso {
 			// PREENCHE O TÍTULO DA PÁGINA
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.name("pageTitle")));
 			driver.findElement(By.name("pageTitle"))
-					.sendKeys(codigo + " " + s);
+					.sendKeys(numeroDaLicao + " " + nomeDaLicao);
 
-			// CONSTROI A PÁGINA DE AULA DO CURSO
+			// CONSTROI A PÁGINA DE AULA DO CURSO E COLOCA NO CLIPBOARD
 			new ClipBoard().copia(new PaginaAulaCurso().transforma(curso, licao));
-
-			// ACIONA O BOTÃO PARA O EDITOR DE HTML
+			
+			// ACIONA BOTÃO PARA CHAMAR O EDITOR DE HTML
 			driver.findElement(By.cssSelector("span.mce_code")).click();
 
-			// PEGA URL DA PÁGINA NOVA CRIADA E TRANSFORMA NUM LINK
+			// USUÁRIO: TECLA CONTROL-V PARA COLAR PÁGINA GERADA NA ÁREA DE TRABALHO DO EDITOR
+			
+			// ESPERARANDO PELA INTERVENÇÃO DO USUÁRIO
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Retorno")));
+
+			// PEGA URL DA PÁGINA NOVA CRIADA E TRANSFORMA NUM LINK COLOCANDO NO CLIPBOARD
 			new ClipBoard()
 					.copia(new LinkLabelDiferente().transforma(driver.getCurrentUrl()).replace("_blank", "_self"));
 
@@ -72,10 +68,11 @@ public class GeraPaginasDeAulaCurso {
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("span.mce_code")));
 			driver.findElement(By.cssSelector("span.mce_code")).click();
 
-			// ESPERA PELA INTERVENÇÃO DO USUÁRIO NA CRIAÇÃO DO LINK DA CHAMADA
-			// DA NOVA PÁGINA
+			// USUÁRIO: ROLA PÁGINA DO EDITOR PARA BAIXO PARA PROCURAR NO CÓDIGO HTML A LIÇÃO 
+			//          CORRESPONDENTE PARA SUBSTITUIR PELO LINK GERADO
+			
+			// ESPERARANDO PELA INTERVENÇÃO DO USUÁRIO
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.className("LinkLabelDiferente")));
-
 		}
 	}
 }

@@ -34,10 +34,10 @@ public class Opcoes {
 			System.out.println("|                                           |                     |(22)XML padrão do Curso                     |");
 			System.out.println("|                                           |                     |                                            |");
 			System.out.println("---------------------------------------------                     |                                            |");
-			System.out.println("| ATUALIZA                                  |                     |                                            |");
+			System.out.println("| ATUALIZA/COPIA                            |                     |                                            |");
 			System.out.println("---------------------------------------------                     |                                            |");
-			System.out.println("|(23)URLs de Videos da Licao                |                     |                                            |");
-			System.out.println("|(24)Videos da Licao nas Pastas Alfresco    |                     |                                            |");
+			System.out.println("|(23)URLs de Videos da Licao no XML do Curso|                     |                                            |");
+			System.out.println("|(24)Videos da Licao para Pastas do Alfresco|                     |                                            |");
 			System.out.println("|                                           |                     |                                            |");
 			System.out.println("----------------------------------------------------------------------------------------------------------------");
 			System.out.println("Para encerrar digite 99. Informe o tipo:");

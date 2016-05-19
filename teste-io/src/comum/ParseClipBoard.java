@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
-import atualiza.AtualizaVideosDaLicao;
-import atualiza.AtualizaVideosDaLicaoNasPastasAlfresco;
+import atualiza.AtualizaUrlsDeVideosDaLicaoNoXmlDoCurso;
+import atualiza.CopiaVideosDaLicaoParaPastasDoAlfresco;
 import formata.FonteMaior;
 import formata.FundoCinza;
 import formata.ItalicoVermelho;
@@ -128,10 +128,10 @@ public class ParseClipBoard {
 				vai = new XmlPadraoDoCurso().transforma(curso);
 				break;
 			case "23":
-				vai = new AtualizaVideosDaLicao().transforma(curso);
+				vai = new AtualizaUrlsDeVideosDaLicaoNoXmlDoCurso().transforma(curso);
 				break;
 			case "24":
-				vai = new AtualizaVideosDaLicaoNasPastasAlfresco().transforma(curso);
+				vai = new CopiaVideosDaLicaoParaPastasDoAlfresco().transforma(curso);
 				break;
 			}
 

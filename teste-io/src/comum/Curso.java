@@ -25,6 +25,7 @@ public class Curso {
 	// LINHA 04 PÁGINA ÍNDICE (RECURSOS)
 	private String urlGitHub;
 	private String pastaGitHubLocal;
+	private String diretorioVideos;
 	
 	List<Licao> licoes = new ArrayList<>();
 
@@ -148,6 +149,14 @@ public class Curso {
 
 	public String getDataInicio() {
 		return dataInicio;
+	}
+
+	public String getDiretorioVideos() {
+		return diretorioVideos;
+	}
+
+	public void setDiretorioVideos(String diretorioVideos) {
+		this.diretorioVideos = diretorioVideos;
 	}
 
 }
