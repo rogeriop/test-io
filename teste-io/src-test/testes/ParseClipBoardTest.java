@@ -20,7 +20,7 @@ import gera.manual.GeraEstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
 import gera.manual.PaginaAulaCurso;
-import gera.manual.PaginaIndiceCurso;
+import gera.manual.GeraPaginaSumarioDoCurso;
 import gera.manual.XmlPadraoDoCurso;
 import transcreve.Codigo;
 import transcreve.Imagem;
@@ -217,7 +217,7 @@ public class ParseClipBoardTest {
 		ResultadoEsperadoDaOpcao17 = opcao17.getResultado();
 
 		// Cenário e Resultado Esperado da Opção 18
-		CenariosEResultadosEsperados opcao18 = new CenariosEResultadosEsperados(true, "Opcao18TextoParaTeste.txt", "Opcao18ResultadoEsperado.txt");
+		CenariosEResultadosEsperados opcao18 = new CenariosEResultadosEsperados(true, "CursoNoFormatoXmlParaTeste.txt", "Opcao18ResultadoEsperado.txt");
 		curso18 = opcao18.getCurso();
 		ResultadoEsperadoDaOpcao18 = opcao18.getResultado();
 
@@ -346,7 +346,7 @@ public class ParseClipBoardTest {
 
 	@Test
 	public void deveGerarPaginaIndiceDoCurso() {
-		String ResultadoGerado = new PaginaIndiceCurso().transforma(curso18);
+		String ResultadoGerado = new GeraPaginaSumarioDoCurso().transforma(curso18);
 		assertEquals(ResultadoEsperadoDaOpcao18, ResultadoGerado);
 	}
 

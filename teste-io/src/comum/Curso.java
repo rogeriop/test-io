@@ -12,6 +12,7 @@ public class Curso {
 	private String urlIndiceDoCurso;
 	private String urlPastasDoCurso;
 	private String urlCertificado;
+	private String diretorioVideos;
 	
 	// LINHA 01 PÁGINA ÍNDICE (RECURSOS)
 	private String urlCurso;
@@ -25,7 +26,8 @@ public class Curso {
 	// LINHA 04 PÁGINA ÍNDICE (RECURSOS)
 	private String urlGitHub;
 	private String pastaGitHubLocal;
-	private String diretorioVideos;
+	// OUTRAS LINHAS QUE POR VENTURA SEJAM NECESSÁRIAS
+	private List<String> recursosAdicionais = new ArrayList<>();
 	
 	List<Licao> licoes = new ArrayList<>();
 
@@ -159,4 +161,11 @@ public class Curso {
 		this.diretorioVideos = diretorioVideos;
 	}
 
+	public List<String> getRecursosAdicionais() {
+		return recursosAdicionais;
+	}
+	
+	public void adicionaLinhaRecurso(String recurso) {
+		this.recursosAdicionais.add(recurso);
+	}
 }

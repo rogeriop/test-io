@@ -36,6 +36,9 @@ public class XmlPadraoDoCurso implements UsaCurso {
 		curso.setUrlGitHub("http://github.com/");
 		curso.setPastaGitHubLocal("CaminhoLocalProjeto");
 		curso.setDiretorioVideos("c:\\Users\\NomeUsuario\\Downloads\\ALURA");
+
+		// DEMAIS LINHAS ÍNDICE (RECURSOS)
+		curso.adicionaLinhaRecurso("Descrição");
 		
 		List<Licao> licoes = new ArrayList<>();
 

@@ -6,6 +6,7 @@
   <urlIndiceDoCurso>http://</urlIndiceDoCurso>
   <urlPastasDoCurso>http://</urlPastasDoCurso>
   <urlCertificado>http://</urlCertificado>
+  <diretorioVideos>c:\Users\NomeUsuario\Downloads\ALURA</diretorioVideos>
   <urlCurso>http://www.google.com.br</urlCurso>
   <emailAluno>nome@provedor.com</emailAluno>
   <senhaAluno>110</senhaAluno>
@@ -14,7 +15,9 @@
   <nomeProjeto>NomeProjeto</nomeProjeto>
   <urlGitHub>http://github.com/</urlGitHub>
   <pastaGitHubLocal>CaminhoLocalProjeto</pastaGitHubLocal>
-  <diretorioVideos>c:\Users\NomeUsuario\Downloads\ALURA</diretorioVideos>
+  <recursosAdicionais>
+    <string>Descrição</string>
+  </recursosAdicionais>
   <licoes>
     <licao>
       <codigo>01</codigo>

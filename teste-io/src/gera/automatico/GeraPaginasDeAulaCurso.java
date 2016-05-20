@@ -71,7 +71,7 @@ public class GeraPaginasDeAulaCurso {
 			// USUÁRIO: ROLA PÁGINA DO EDITOR PARA BAIXO PARA PROCURAR NO CÓDIGO HTML A LIÇÃO 
 			//          CORRESPONDENTE PARA SUBSTITUIR PELO LINK GERADO
 			
-			// ESPERARANDO PELA INTERVENÇÃO DO USUÁRIO
+			// ESPERANDO PELA INTERVENÇÃO DO USUÁRIO
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.className("LinkLabelDiferente")));
 		}
 	}

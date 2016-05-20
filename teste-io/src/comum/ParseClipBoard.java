@@ -19,7 +19,7 @@ import gera.manual.GeraEstruturaSubTitulosExplicacao;
 import gera.manual.IconeDiploma;
 import gera.manual.IconeTecla;
 import gera.manual.PaginaAulaCurso;
-import gera.manual.PaginaIndiceCurso;
+import gera.manual.GeraPaginaSumarioDoCurso;
 import gera.manual.XmlPadraoDoCurso;
 import transcreve.Codigo;
 import transcreve.Imagem;
@@ -113,7 +113,7 @@ public class ParseClipBoard {
 				vai = new GeraEstruturaSubTitulosExplicacao().transforma(pegaLicao(opcoes, curso));
 				break;
 			case "18":
-				vai = new PaginaIndiceCurso().transforma(curso);
+				vai = new GeraPaginaSumarioDoCurso().transforma(curso);
 				break;
 			case "19":
 				vai = new PaginaAulaCurso().transforma(curso, pegaLicao(opcoes, curso));

@@ -34,12 +34,12 @@ public class CopiaVideosDaLicaoParaPastasDoAlfresco {
 		String linkUploadfilesNoLadoEsquerdoInferiorAreaDeArquivos = "Upload files";
 
 		String codigoDoCurso = curso.getCodigo();
-		String nomeDoCurso = curso.getNome();
+		String nomeDoCurso = curso.getNome().trim();
 		String diretorioDoCurso = curso.getDiretorioVideos();
 
 		for (Licao licao : licoes) {
 			String numeroDaLicao = licao.getCodigo();
-			String nomeDaLicao = licao.getNome();
+			String nomeDaLicao = licao.getNome().trim();
 			List<Video> videos = licao.getVideos();
 
 			// ENTRA NA PASTA DA LIÇÃO
@@ -69,7 +69,6 @@ public class CopiaVideosDaLicaoParaPastasDoAlfresco {
 					}
 					
 					// SELECIONA ARQUIVO PARA IMPORTAÇÃO NO ALFRESCO
-//					System.out.println(diretorioDoCurso + "\\" + codigoDoCurso + " " + nomeDoCurso + "\\" + nomeDoVideo);
 					wait.until(ExpectedConditions.presenceOfElementLocated(By.id(botaoSelecionarArquivoNaJanelaUploadFile)));
 					WebElement El = driver.findElement(By.id(botaoSelecionarArquivoNaJanelaUploadFile));
 					El.sendKeys(diretorioDoCurso + "\\" + codigoDoCurso + " " + nomeDoCurso + "\\" + nomeDoVideo);
